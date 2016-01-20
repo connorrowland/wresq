@@ -1,44 +1,58 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,900,500|Libre+Baskerville:400,700|Lato:400,300);
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,900,500|Libre+Baskerville:400,700|Valera);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,300);
 body{
-
+	margin: 0px;
 }
 h1{
-
-}
-h2{
 	font-family: 'Libre Baskerville', serif;
 	font-size: 36px;
 	color: #F3F3F4;
-	text-align: center;
 	font-weight: 400;
 }
+h2{
+}
 h3{
-	font-family: 'Alegreya Sans', sans-serif;
-	font-weight: 300;
-	font-size: 36px;
-	text-align: center;
-
+	font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 1.5;
+    text-transform: uppercase;
+}
+.orangeh3{
+	color: #EA5A3B;
 }
 h4{
 	font-family: 'Libre Baskerville', serif;
 	font-size: 24px;
 	color: #F3F3F4;
-	text-align: center;
 	font-weight: 400;
-
 }
 h5{
-	font-family: 'Alegreya Sans', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-weight: 400;
 	font-size: 22px;
 	color: #1B5887;
-
 }
 h6{
 	font-family: 'Libre Baskerville', serif;
 	font-size: 36px;
 	color: #E7E8E9;
 	font-weight: 400;
+}
+p{
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+nav a{
+	font-family: 'Lato', sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 400;
+	font-size: 14px;
+	margin-left: 5px; 
+	margin-right: 5px;
+	color: white;
 }
 .defined-width-text{
 	margin-left: auto;
@@ -84,6 +98,21 @@ h6{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
+
+
+
+
+
+
+
+
+/*---------------------------------------FOOTER---------------------------------------------------------------------------*/
+
+
+footer{
+	text-align: center;
+}
 .footer-phone-number{
 	display: inline-block;
     padding-left: 50px;
@@ -103,33 +132,50 @@ h6{
 .phone-container{
 	width: 100%;
 }
-/*PAGES OTHER THAN HOME UNIV STYLING*/
+
+
+/*---------------------------------------END FOOTER-----------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*---------------------------------------PAGES W/O UNIV STYLING-----------------------------------------------------------*/
+
+
 .non-lander-body{
-	margin: 0px;
 	background-color: #2E3335;
 }
 .non-lander-body p{
 	color: white;
+	letter-spacing: .5;
 }
 .alternate-nav{
 	background-color: white;
 	height: 50px;
 }
 .alternate-nav a{
-	font-family: 'Alegreya Sans', sans-serif;
 	color: #2E3335;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 500;
-	font-size: 14px;
-	margin-left: 5px; 
-	margin-right: 5px;
 }
-/*END PAGES OTHER THAN HOME UNIV STYLING*/
 
 
-/*HOME PAGE*/
+/*---------------------------------------END PAGES W/O UNIV STYLING-------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+/*------------------------------------------HOME PAGE---------------------------------------------------------------------*/
+
+
 #home-page-body{
 	background-color: #ffffff;
 	margin: 0px;
@@ -149,17 +195,6 @@ h6{
 	margin-top: 50px;
 
 }
-#home-page-nav a{
-	font-family: 'Open Sans', sans-serif;
-	color: white;
-	text-decoration: none;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-weight: 400;
-	font-size: 14px;
-	margin-left: 10px; 
-	margin-right: 10px;
-}
 #lander-photo-box img{
 	width: 100%;
 	height: auto;
@@ -170,14 +205,13 @@ h6{
     margin-top: 0px;
     position: relative;
     top: -340;
-    font-size: 60px;
+    font-size: 70px;
 }
 #lander-philosophy-box p{
 	width: 700px;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
-
 }
 #big-quotation{
 	color: #1B5887;
@@ -188,9 +222,35 @@ h6{
 	font-weight: 400;
 }
 
-/*END HOME PAGE*/
 
-/*RESULTS PAGE*/
+/*------------------------------------------END HOME PAGE-----------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+/*------------------------------------------PRACTICE AREAS----------------------------------------------------------------*/
+
+
+#overview-services-link-box{
+	list-style: none;
+}
+
+
+/*------------------------------------------END PRACTICE AREAS------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*------------------------------------------RESULTS-----------------------------------------------------------------------*/
+
+
 .blue-results-box{
 	background-color: #1B5887;
 
@@ -204,13 +264,46 @@ h6{
 }
 .clear-results-box h5, .blue-results-box h5{
 	color: white;
+	margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 40px;
 }
 
-/*end RESULTS PAGE*/
 
-/*CONTACT*/
+/*--------------------------------------END RESULTS-----------------------------------------------------------------------*/
+
+
+
+
+
+
+
+/*--------------------------------------CONTACT---------------------------------------------------------------------------*/
+
+
+.contact-box-1{
+	text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
 .contact-box{
+	margin-top: 35px;
 	width: 300px;
+	margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: inline-block;
+}
+.contact-box h5{
+	color: white;
+	margin-top: 0px;
+}
+.bold-location{
+	font-size: 30px;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
-/*END CONTACT*/
+/*--------------------------------------END CONTACT-----------------------------------------------------------------------*/
