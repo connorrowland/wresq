@@ -148,7 +148,7 @@ footer{
 
 
 .non-lander-body{
-	background-color: #2E3335;
+	background-color: #292D2F;
 }
 .non-lander-body p{
 	color: white;
@@ -159,7 +159,7 @@ footer{
 	height: 50px;
 }
 .alternate-nav a{
-	color: #2E3335;
+	color: #292D2F;
 }
 
 
@@ -182,7 +182,7 @@ footer{
 	text-align: center;
 }
 #home-page-nav{
-	background-color: #2E3335;
+	background-color: #292D2F;
 	height: 250px;
 	text-align: center;
 }
@@ -235,9 +235,39 @@ footer{
 /*------------------------------------------PRACTICE AREAS----------------------------------------------------------------*/
 
 
+#practice-areas-link-box{
+	width: 340px;
+    background-color: #F1F1F2;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#practice-areas-link-box h5{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+    background-color: #E38967;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: .5;
+}
 #overview-services-link-box{
 	list-style: none;
+	padding-left: 0px;
 }
+#overview-services-link-box a{
+	text-decoration: none;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: #535252;
+}
+#overview-services-link-box a:hover{
+	color: #E38967;
+}
+#overview-services-link-box li{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}   
 
 
 /*------------------------------------------END PRACTICE AREAS------------------------------------------------------------*/
