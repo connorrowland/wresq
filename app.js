@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	//Fade out the lander photo and text as user scrolls down
 	$(window).scroll(function(){
-	    $("#lander-photo-box").css("opacity", 1 - $(window).scrollTop() / 700);
+	    $("#lander-photo-box").css("opacity", 1 - $(window).scrollTop() / 770);
 	  });
 
 	//Page transitions
@@ -18,13 +18,13 @@ $(document).ready(function() {
 		window.location = newLocation;
 	}
 
-	//Practice areas link transitions
-	$("#overview-services-link-box").children().click(function(){
-		var clicked = event.target;
-		$('html, body').animate({
-	        scrollTop: $(clicked).offset().top
-	    }, 2000);
-	});
+	// //Practice areas link transitions
+	// $("#overview-services-link-box").children().click(function(){
+	// 	var clicked = event.target;
+	// 	$('html, body').animate({
+	//         scrollTop: $(clicked).offset().top
+	//     }, 2000);
+	// });
 
 	//About page image slideshow
 	$('.img-wrap img:gt(0)').hide();
