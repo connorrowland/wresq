@@ -1,34 +1,43 @@
-@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:400,300,900,500|Libre+Baskerville:400,700|Valera);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+@import url(https://fonts.googleapis.com/css?family=Quattrocento);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,300);
 body{
 	margin: 0px;
 }
 h1{
-	font-family: 'Libre Baskerville', serif;
-	font-size: 36px;
+	font-family: 'Lato', sans-serif;
+	font-size: 50px;
 	color: #F3F3F4;
 	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 h2{
+	font-family: 'Quattrocento', serif;
+	color: black;
+	font-size: 40px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
 }
 h3{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Oswald', sans-serif;
     font-weight: 400;
-    font-size: 36px;
-    letter-spacing: 1.5;
+    font-size: 50px;
+    letter-spacing: 1;
     text-transform: uppercase;
+    color: white;
 }
 .orangeh3{
 	color: #EA5A3B;
 }
 h4{
-	font-family: 'Libre Baskerville', serif;
+	font-family: 'Quattrocento', serif;
 	font-size: 24px;
 	color: #F3F3F4;
 	font-weight: 400;
 }
 h5{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
 	font-size: 22px;
 	color: #1B5887;
@@ -40,7 +49,7 @@ h6{
 	font-weight: 400;
 }
 p{
-	font-family: 'Lato', sans-serif;
+	font-family: 'Quattrocento', serif;
 	font-weight: 400;
 }
 nav a{
@@ -62,7 +71,14 @@ nav a{
 	margin-right: auto;
 	width: 700px;
 }
-.centered-text{
+.twenty-spacer{
+	width: 100%;
+	height: 20px;
+}
+.justify-text{
+	text-align: justify;
+}
+.center-text{
 	text-align: center;
 }
 .thin-orange-divider-line{
@@ -110,8 +126,38 @@ nav a{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-
-
+.thin-small-blue-line{
+	width: 300px;
+	height: 2px;
+	background-color:#1B5887;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.lander-image-text-container{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+}
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+.lander-container{
+	width: 100%;
+	overflow: hidden;
+	height: 350px;
+}
+.about-image{
+	width: 100%;
+	-webkit-filter: opacity(.2);
+    filter: opacity(.2);
+}
+.lander-container h3{
+    margin: 141px;
+}
 
 
 
@@ -338,6 +384,24 @@ footer{
 }
 
 
+
+
+
+#quattrocento{
+	font-family: 'Quattrocento', serif;
+	font-size: 16px;
+	color: white;
+	font-weight: 400;
+
+}
+#oswald{
+	font-family: 'Oswald', sans-serif;
+	font-size: 60px;
+	color: white;
+	font-weight: 400;
+	letter-spacing: 1;
+}
+
 /*------------------------------------------END ABOUT-----------------------------------------------------------------*/
 
 
@@ -396,7 +460,23 @@ footer{
 
 
 .results-container{
-	margin-bottom: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.individual-result-container{
+	text-align: center;
+	display: inline-block;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+    margin-bottom: 15px;
+}
+.individual-result-container h5{
+	margin: 0;
+	font-size: 30px;
 }
 .blue-results-box{
 	background-color: #1B5887;
@@ -432,26 +512,36 @@ footer{
 
 /*--------------------------------------CONTACT---------------------------------------------------------------------------*/
 
-
+.location-text-box{
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin-left: 15px;
+}
+.google-location{
+	width: 350px;
+    display: inline-block;
+    height: 320px;
+    vertical-align: middle;
+}
 .contact-box-1{
 	text-align: center;
-    width: 700px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
 }
 .contact-box{
 	margin-top: 35px;
-	width: 300px;
-	margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+	margin-bottom: 35px;
+	margin-left: 25px;
+    margin-right: 25px;
+    text-align: left;
     display: inline-block;
     vertical-align: top;
 }
 .contact-box h5{
 	color: white;
-	margin-top: 0px;
+	margin: 0px;
 }
 .bold-location{
 	font-size: 30px;
@@ -468,17 +558,33 @@ footer{
 
 /*--------------------------------------ATTORNEYS-----------------------------------------------------------------------*/
 
+.attorney-side-text{
+	display: inline-block;
+    width: 650px;
+    margin-left: 25px;
+}
+.attorney-side-text h4{
+	margin-top: 0px;
+}
+
 .attorney-box h5{
 	margin-bottom: 10px;
-	
 }
 .attorney-photo{
-	width: 450px;
+	width: 200px;
 	height: auto;
+	display: inline-block;
+    vertical-align: top;
 }
-.attorney-box{
+.attorney-container{
 	margin-top: 25px;
 	margin-bottom: 25px;
+	width: 100%;
+}
+.attorney-inner-container{
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
 }
 
 

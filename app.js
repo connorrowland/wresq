@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	//Fade out the lander photo and text as user scrolls down
 	$(window).scroll(function(){
-	    $("#lander-photo-box").css("opacity", 1 - $(window).scrollTop() / 770);
+	    $("#lander-photo-box").css("opacity", 1 - $(window).scrollTop() / 1400);
 	  });
 
 	//Page transitions
@@ -25,6 +25,14 @@ $(document).ready(function() {
 	//         scrollTop: $(clicked).offset().top
 	//     }, 2000);
 	// });
+	$("#overview-services-link-box").delegate("a","click",function(){
+		slowScroll();
+	});
+	function slowScroll () {
+		$('html, body').animate({
+	        scrollTop: $(clicked).offset().top
+	    }, 2000);
+	}
 
 	//About page image slideshow
 	$('.img-wrap img:gt(0)').hide();
