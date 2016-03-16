@@ -1,8 +1,13 @@
 $(document).ready(function() {
 
-	//Fade out the lander photo and text as user scrolls down
+	//Fade out the homepage lander photo and text as user scrolls down
 	$(window).scroll(function(){
-	    $("#lander-photo-box").css("opacity", 1 - $(window).scrollTop() / 1400);
+	    $(".lander-image-container").css("opacity", 1 - $(window).scrollTop() / 500);
+	  });
+
+	//Fade out non homepage lander photos
+	$(window).scroll(function(){
+	    $(".non-homepage-image").css("opacity", 1 - $(window).scrollTop() / 1900);
 	  });
 
 	//Page transitions
@@ -13,7 +18,6 @@ $(document).ready(function() {
 		newLocation = this.href;
 		$('body').fadeOut(1000, newpage);
 	});
-
 	function newpage() {
 		window.location = newLocation;
 	}
@@ -25,6 +29,7 @@ $(document).ready(function() {
 	//         scrollTop: $(clicked).offset().top
 	//     }, 2000);
 	// });
+
 	$("#overview-services-link-box").delegate("a","click",function(){
 		slowScroll();
 	});

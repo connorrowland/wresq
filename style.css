@@ -10,7 +10,7 @@ h1{
 	color: #F3F3F4;
 	font-weight: 400;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 }
 h2{
 	font-family: 'Quattrocento', serif;
@@ -43,10 +43,13 @@ h5{
 	color: #1B5887;
 }
 h6{
-	font-family: 'Libre Baskerville', serif;
-	font-size: 36px;
-	color: #E7E8E9;
-	font-weight: 400;
+    font-family: 'Oswald';
+    color: #EA5A3B !important;
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 40;
 }
 p{
 	font-family: 'Quattrocento', serif;
@@ -135,6 +138,15 @@ nav a{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+.thick-small-blue-line{
+	width: 300px;
+	height: 10px;
+	background-color:#1B5887;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 .lander-image-text-container{
     width: 100%;
     height: 100%;
@@ -150,16 +162,47 @@ nav a{
 	overflow: hidden;
 	height: 350px;
 }
-.about-image{
-	width: 100%;
-	-webkit-filter: opacity(.2);
-    filter: opacity(.2);
-}
+
 .lander-container h3{
     margin: 141px;
 }
 
+/*------ universal styling media queries ------*/
+@media only screen and (max-width: 770px) {
+	.defined-width-text{
+		width: 655px;
+	}
+	.thin-orange-divider-line{
+		width: 655px;
+	}
+	.thick-orange-divider-line{
+		width: 655px;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.defined-width-text{
+		width: 455px;
+	}
+	.thin-orange-divider-line{
+		width: 455px;
+	}
+	.thick-orange-divider-line{
+		width: 455px;
+	}
+}
+@media only screen and (max-width: 475px) {
+	.defined-width-text{
+		width: 355px;
+	}
+	.thin-orange-divider-line{
+		width: 355px;
+	}
+	.thick-orange-divider-line{
+		width: 355px;
+	}
 
+}
+/*------ end universal styling media queries ------*/
 
 
 
@@ -205,7 +248,7 @@ footer{
 }
 .index-footer-icon-container{
     height: 31.5;
-    background-color: white;
+	background-color: #FEFDFB;
     margin-bottom: 50;
 }
 .index-footer{
@@ -214,6 +257,47 @@ footer{
 .index-footer p{
 	color: white !important;
 }
+
+/*------ footer media queries ------*/
+@media only screen and (max-width: 700px) {
+
+	.footer-address-line {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    margin: 10;
+	    color: #292D2F !important;
+	    vertical-align: top;
+	}
+	.footer-icons {
+	    margin-left: 30px;
+	    margin-right: 30px;
+	}
+	.address-container{
+		width: 300px;
+	}
+
+}
+@media only screen and (max-width: 650px) {
+
+	.footer-address-line {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    margin: 10;
+	    color: #292D2F !important;
+	    vertical-align: top;
+	}
+	.footer-icons {
+	    display: inline;
+	    vertical-align: top;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	}
+	.address-container{
+		width: 300px;
+	}
+
+}
+/*------ end footer media queries ------*/
 
 
 /*---------------------------------------END FOOTER-----------------------------------------------------------------------*/
@@ -228,7 +312,15 @@ footer{
 
 /*---------------------------------------PAGES W/O UNIV STYLING-----------------------------------------------------------*/
 
-
+.non-homepage-lander-image-container {
+    height: 350;
+    overflow: hidden;
+}
+.non-homepage-image{
+	width: 100%;
+    -webkit-filter: opacity(.3);
+    filter: opacity(.2);
+}
 .non-lander-body{
 	background-color: #292D2F;
 }
@@ -285,6 +377,13 @@ footer{
     display: block;
 }
 
+@media only screen and (max-width: 475px) {
+	.non-homepage-image{
+		width: auto;
+    	height: 100%;
+	}
+}
+
 
 
 /*---------------------------------------END PAGES W/O UNIV STYLING-------------------------------------------------------*/
@@ -300,8 +399,22 @@ footer{
 /*------------------------------------------HOME PAGE---------------------------------------------------------------------*/
 
 
+.lander-image-container {
+  position: relative;
+}
+.homepage-image {
+	width: 100%;
+    height: auto;
+}
+.text-overlay-image-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+}
 #home-page-body{
-	background-color: #ffffff;
+	background-color: #FEFDFB;
 	margin: 0px;
 	text-align: center;
 }
@@ -319,36 +432,45 @@ footer{
 	margin-top: 50px;
 
 }
-#lander-photo-box img{
-	width: 100%;
-	height: auto;
-}
-#lander-photo-box{
-	height: 650px;
-}
-#trust-the-results{
-	text-align: center;
-    z-index: 10;
-    margin-top: 0px;
-    position: relative;
-    top: -340;
-    font-size: 55px;
-    opacity: 1;
-}
 #lander-philosophy-box p{
 	width: 700px;
     margin-left: auto;
     margin-right: auto;
     text-align: justify;
 }
-#big-quotation{
-	color: #1B5887;
-	font-size: 172px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	font-family: 'Alegreya Sans', sans-serif;
-	font-weight: 400;
+
+/*------ home media queries ------*/
+@media only screen and (max-width: 770px) {
+	#home-page-logo{
+		width: 605px;
+	}
+	#lander-philosophy-box p{
+		width: 655px;
+	}
 }
+@media only screen and (max-width: 650px) {
+	#trust-the-results{
+		font-size: 35px;
+	}
+	#home-page-logo{
+		width: 440px;
+	}
+	#lander-philosophy-box p{
+		width: 455px;
+	}
+}
+@media only screen and (max-width: 475px) {
+	#trust-the-results{
+		font-size: 26px;
+	}
+	#home-page-logo{
+		width: 375px;
+	}
+	#lander-philosophy-box p{
+		width: 355px;
+	}
+}
+/*------ end home media queries ------*/
 
 
 /*------------------------------------------END HOME PAGE-----------------------------------------------------------------*/
@@ -419,10 +541,6 @@ footer{
     color: #EA5A3B;
 }
 
-
-
-
-
 #quattrocento{
 	font-family: 'Quattrocento', serif;
 	font-size: 16px;
@@ -437,6 +555,7 @@ footer{
 	font-weight: 400;
 	letter-spacing: 1;
 }
+
 
 /*------------------------------------------END ABOUT-----------------------------------------------------------------*/
 
@@ -536,7 +655,12 @@ footer{
     margin-left: auto;
     margin-right: auto;
 }
+@media only screen and (max-width: 700px) {
+	.results-container{
+		width: 400px;
+	}
 
+}
 
 /*--------------------------------------END RESULTS-----------------------------------------------------------------------*/
 
@@ -548,17 +672,22 @@ footer{
 
 /*--------------------------------------CONTACT---------------------------------------------------------------------------*/
 
+
 .location-text-box{
     display: inline-block;
     text-align: left;
     vertical-align: top;
     margin-left: 15px;
+    width: 170px;
 }
 .google-location{
 	width: 350px;
     display: inline-block;
     height: 320px;
     vertical-align: middle;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(234,90,59,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(234,90,59,1);
+	box-shadow: 0px 0px 10px 0px rgba(234,90,59,1);
 }
 .contact-box-1{
 	text-align: center;
@@ -581,11 +710,20 @@ footer{
 }
 .bold-location{
 	font-size: 30px;
-	font-weight: 900;
-	text-transform: uppercase;
+	/*font-weight: 900;*/
 	margin-bottom: 10px;
 }
+@media only screen and (max-width: 588px) {
+	.contact-box{
+		text-align: center;
+	}
+	.location-text-box{
+		text-align: center;
+		margin-top: 20px;
+		margin-right: 15px;
+	}
 
+}
 /*--------------------------------------END CONTACT-----------------------------------------------------------------------*/
 
 
@@ -594,10 +732,13 @@ footer{
 
 /*--------------------------------------ATTORNEYS-----------------------------------------------------------------------*/
 
+
 .attorney-side-text{
 	display: inline-block;
     width: 650px;
     margin-left: 25px;
+    border-left: 2px solid #1B5887;
+    padding-left: 15px;
 }
 .attorney-side-text h4{
 	margin-top: 0px;
@@ -623,5 +764,33 @@ footer{
 	width: 900px;
 }
 
+@media only screen and (max-width: 475px) {
+	.attorney-side-text {
+	    display: inline-block;
+	    width: 400px;
+	    border-left: 4px solid #1B5887;
+	    padding-left: 15px;
+	    margin-left: 15px;
+	}
+	.attorney-side-text p{
+		width: 350px;
+	}
+	.attorney-inner-container {
+    	width: 400px;
+	}
+	.attorney-photo {
+	    width: 200px;
+	    height: auto;
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    margin-bottom: 40;
+	}
+
+}
 
 /*--------------------------------------END ATTORNEYS-----------------------------------------------------------------------*/
+
+
+
+
