@@ -5,12 +5,12 @@ body{
 	margin: 0px;
 }
 h1{
-	font-family: 'Lato', sans-serif;
-	font-size: 50px;
-	color: #F3F3F4;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    color: #F3F3F4;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
 }
 h2{
 	font-family: 'Quattrocento', serif;
@@ -166,43 +166,24 @@ nav a{
 .lander-container h3{
     margin: 141px;
 }
-
-/*------ universal styling media queries ------*/
-@media only screen and (max-width: 770px) {
-	.defined-width-text{
-		width: 655px;
-	}
-	.thin-orange-divider-line{
-		width: 655px;
-	}
-	.thick-orange-divider-line{
-		width: 655px;
-	}
+.responsive-nav{
+	display: none;
 }
-@media only screen and (max-width: 650px) {
-	.defined-width-text{
-		width: 455px;
-	}
-	.thin-orange-divider-line{
-		width: 455px;
-	}
-	.thick-orange-divider-line{
-		width: 455px;
-	}
+#hamburgerIcon{
+    position: relative;
+    top: 35px;
+    left: 20px;
+    z-index: 2;
+    display: none;
+    width: 30px;
 }
-@media only screen and (max-width: 475px) {
-	.defined-width-text{
-		width: 355px;
-	}
-	.thin-orange-divider-line{
-		width: 355px;
-	}
-	.thick-orange-divider-line{
-		width: 355px;
-	}
-
+#hamburgerIcon div{
+    height: 5px;
+    width: 30px;
+    background-color: white;
+    border-radius: 1px;
+    margin: 4px 0px 4px 0px;
 }
-/*------ end universal styling media queries ------*/
 
 
 
@@ -258,46 +239,6 @@ footer{
 	color: white !important;
 }
 
-/*------ footer media queries ------*/
-@media only screen and (max-width: 700px) {
-
-	.footer-address-line {
-	    padding-left: 0px;
-	    padding-right: 0px;
-	    margin: 10;
-	    color: #292D2F !important;
-	    vertical-align: top;
-	}
-	.footer-icons {
-	    margin-left: 30px;
-	    margin-right: 30px;
-	}
-	.address-container{
-		width: 300px;
-	}
-
-}
-@media only screen and (max-width: 650px) {
-
-	.footer-address-line {
-	    padding-left: 0px;
-	    padding-right: 0px;
-	    margin: 10;
-	    color: #292D2F !important;
-	    vertical-align: top;
-	}
-	.footer-icons {
-	    display: inline;
-	    vertical-align: top;
-	    margin-left: 10px;
-	    margin-right: 10px;
-	}
-	.address-container{
-		width: 300px;
-	}
-
-}
-/*------ end footer media queries ------*/
 
 
 /*---------------------------------------END FOOTER-----------------------------------------------------------------------*/
@@ -332,14 +273,21 @@ footer{
 	background-color: white;
 	height: 65px;
 }
+.nav-links-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 35px;
+}
 .alternate-nav a{
 	color: #292D2F;
 }
 #header-logo{
-	padding-top: 10px;
     display: inline;
     vertical-align: middle;
-    padding-left: 50px;
+    margin-right: 15px;
+    padding-right: 30px;
+    border-right: 1px solid black;
 }
 
 /* Dropdown Menu */
@@ -377,12 +325,6 @@ footer{
     display: block;
 }
 
-@media only screen and (max-width: 475px) {
-	.non-homepage-image{
-		width: auto;
-    	height: 100%;
-	}
-}
 
 
 
@@ -398,6 +340,9 @@ footer{
 
 /*------------------------------------------HOME PAGE---------------------------------------------------------------------*/
 
+#trust-the-results{
+	color: #292D2F;
+}
 
 .lander-image-container {
   position: relative;
@@ -420,16 +365,16 @@ footer{
 }
 #home-page-nav{
 	background-color: #292D2F;
-	height: 250px;
+	height: 230px;
 	text-align: center;
 }
 #home-page-nav nav{
 	margin-top: 50px;
 }
 #home-page-logo{
-	width: 700px;
-	height: auto;
-	margin-top: 50px;
+    width: 625px;
+    height: auto;
+    margin-top: 40px;
 
 }
 #lander-philosophy-box p{
@@ -439,38 +384,6 @@ footer{
     text-align: justify;
 }
 
-/*------ home media queries ------*/
-@media only screen and (max-width: 770px) {
-	#home-page-logo{
-		width: 605px;
-	}
-	#lander-philosophy-box p{
-		width: 655px;
-	}
-}
-@media only screen and (max-width: 650px) {
-	#trust-the-results{
-		font-size: 35px;
-	}
-	#home-page-logo{
-		width: 440px;
-	}
-	#lander-philosophy-box p{
-		width: 455px;
-	}
-}
-@media only screen and (max-width: 475px) {
-	#trust-the-results{
-		font-size: 26px;
-	}
-	#home-page-logo{
-		width: 375px;
-	}
-	#lander-philosophy-box p{
-		width: 355px;
-	}
-}
-/*------ end home media queries ------*/
 
 
 /*------------------------------------------END HOME PAGE-----------------------------------------------------------------*/
@@ -655,12 +568,7 @@ footer{
     margin-left: auto;
     margin-right: auto;
 }
-@media only screen and (max-width: 700px) {
-	.results-container{
-		width: 400px;
-	}
 
-}
 
 /*--------------------------------------END RESULTS-----------------------------------------------------------------------*/
 
@@ -713,17 +621,7 @@ footer{
 	/*font-weight: 900;*/
 	margin-bottom: 10px;
 }
-@media only screen and (max-width: 588px) {
-	.contact-box{
-		text-align: center;
-	}
-	.location-text-box{
-		text-align: center;
-		margin-top: 20px;
-		margin-right: 15px;
-	}
 
-}
 /*--------------------------------------END CONTACT-----------------------------------------------------------------------*/
 
 
@@ -764,6 +662,177 @@ footer{
 	width: 900px;
 }
 
+
+
+/*--------------------------------------END ATTORNEYS-----------------------------------------------------------------------*/
+
+
+/*------ universal styling media queries ------*/
+@media only screen and (max-width: 770px) {
+	.defined-width-text{
+		width: 655px;
+	}
+	.thin-orange-divider-line{
+		width: 655px;
+	}
+	.thick-orange-divider-line{
+		width: 655px;
+	}
+	.responsive-nav{
+		display: inline-block !important;
+	}
+	#hamburgerIcon{
+		display: inline !important;
+	}
+	.nav-links{
+		display: none;
+	}
+
+}
+@media only screen and (max-width: 650px) {
+	.defined-width-text{
+		width: 455px;
+	}
+	.thin-orange-divider-line{
+		width: 455px;
+	}
+	.thick-orange-divider-line{
+		width: 455px;
+	}
+}
+@media only screen and (max-width: 475px) {
+	.defined-width-text{
+		width: 355px;
+	}
+	.thin-orange-divider-line{
+		width: 355px;
+	}
+	.thick-orange-divider-line{
+		width: 355px;
+	}
+
+}
+/*------ End universal styling media queries ------*/
+
+
+
+/*------ non-universal styling media queries ------*/
+@media only screen and (max-width: 475px) {
+	.non-homepage-image{
+		width: auto;
+    	height: 100%;
+	}
+}
+/*------ End non-universal styling media queries ------*/
+
+
+
+/*------ Footer media queries ------*/
+@media only screen and (max-width: 700px) {
+
+	.footer-address-line {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    margin: 10;
+	    color: #292D2F !important;
+	    vertical-align: top;
+	}
+	.footer-icons {
+	    margin-left: 30px;
+	    margin-right: 30px;
+	}
+	.address-container{
+		width: 300px;
+	}
+
+}
+@media only screen and (max-width: 650px) {
+
+	.footer-address-line {
+	    padding-left: 0px;
+	    padding-right: 0px;
+	    margin: 10;
+	    color: #292D2F !important;
+	    vertical-align: top;
+	}
+	.footer-icons {
+	    display: inline;
+	    vertical-align: top;
+	    margin-left: 10px;
+	    margin-right: 10px;
+	}
+	.address-container{
+		width: 300px;
+	}
+
+}
+/*------ End Footer media queries ------*/
+
+
+
+/*------ Home media queries ------*/
+@media only screen and (max-width: 770px) {
+	#home-page-logo{
+		width: 605px;
+	}
+	#lander-philosophy-box p{
+		width: 655px;
+	}
+}
+@media only screen and (max-width: 650px) {
+	#trust-the-results{
+		font-size: 35px;
+	}
+	#home-page-logo{
+		width: 440px;
+	}
+	#lander-philosophy-box p{
+		width: 455px;
+	}
+}
+@media only screen and (max-width: 475px) {
+	#trust-the-results{
+		font-size: 26px;
+	}
+	#home-page-logo{
+		width: 375px;
+	}
+	#lander-philosophy-box p{
+		width: 355px;
+	}
+}
+/*------ End Home media queries ------*/
+
+
+
+/*------ Results media queries ------*/
+@media only screen and (max-width: 700px) {
+	.results-container{
+		width: 400px;
+	}
+
+}
+/*------ End Results media queries ------*/
+
+
+
+/*------ Contact media queries ------*/
+@media only screen and (max-width: 588px) {
+	.contact-box{
+		text-align: center;
+	}
+	.location-text-box{
+		text-align: center;
+		margin-top: 20px;
+		margin-right: 15px;
+	}
+
+}
+/*------ End Results media queries ------*/
+
+
+
+/*------ Attorneys media queries ------*/
 @media only screen and (max-width: 475px) {
 	.attorney-side-text {
 	    display: inline-block;
@@ -788,9 +857,4 @@ footer{
 	}
 
 }
-
-/*--------------------------------------END ATTORNEYS-----------------------------------------------------------------------*/
-
-
-
-
+/*------ End Attorneys media queries ------*/

@@ -2,13 +2,17 @@ $(document).ready(function() {
 
 	//Fade out the homepage lander photo and text as user scrolls down
 	$(window).scroll(function(){
-	    $(".lander-image-container").css("opacity", 1 - $(window).scrollTop() / 500);
+	    $(".lander-image-container").css("opacity", 1 - $(window).scrollTop() / 900);
 	  });
+	//////////////////////////////
+
+
 
 	//Fade out non homepage lander photos
 	$(window).scroll(function(){
 	    $(".non-homepage-image").css("opacity", 1 - $(window).scrollTop() / 1900);
 	  });
+	//////////////////////////////
 
 	//Page transitions
 	$('body').css('display', 'none');
@@ -21,6 +25,7 @@ $(document).ready(function() {
 	function newpage() {
 		window.location = newLocation;
 	}
+	//////////////////////////////
 
 	// //Practice areas link transitions
 	// $("#overview-services-link-box").children().click(function(){
@@ -38,6 +43,7 @@ $(document).ready(function() {
 	        scrollTop: $(clicked).offset().top
 	    }, 2000);
 	}
+	//////////////////////////////
 
 	//About page image slideshow
 	$('.img-wrap img:gt(0)').hide();
@@ -51,5 +57,27 @@ $(document).ready(function() {
 	    $('.img-wrap img:last-child').prependTo('.img-wrap').fadeOut();
 	    $('.img-wrap img:first-child').fadeIn();
 	});
+	//////////////////////////////
+
+
+	//responsive menu
+
+	var hamburgerIcon = $("#hamburgerIcon");
+	var xOutMenu = $("#xOut");
+
+	//adds a class of hidden which to hamburgerIcon sets the hamburger icon's dispaly to none, making it invisible
+	  hamburgerIcon.click(function (){
+	    $("nav").toggle();
+	    // $(this).addClass("hidden");
+	    // $(xOutMenu).removeClass("hidden");
+	  });
+
+	  //adds a class of hidden to the X out P tag which sets it's dispaly to none, making it invisible.
+	  $(xOutMenu).click(function () {
+	    $("nav").toggle();
+	    // hamburgerIcon.removeClass("hidden");
+	    // $("nav").addClass("hidden");
+	  });
+	//////////////////////////////
 
 });
