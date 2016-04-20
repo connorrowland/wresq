@@ -36,48 +36,56 @@ $(document).ready(function() {
 	// });
 
 	$("#overview-services-link-box").delegate("a","click",function(){
-		slowScroll();
-	});
-	function slowScroll () {
 		$('html, body').animate({
-	        scrollTop: $(clicked).offset().top
-	    }, 2000);
-	}
+	        scrollTop: $(this).offset().top
+	    }, 1000);
+	});
 	//////////////////////////////
 
 	//About page image slideshow
-	$('.img-wrap img:gt(0)').hide();
+	// $('.img-wrap img:gt(0)').hide();
 
-	$('.next').click(function() {
-	    $('.img-wrap img:first-child').fadeOut().next().fadeIn().end().appendTo('.img-wrap');
-	});
+	// $('.next').click(function() {
+	//     $('.img-wrap img:first-child').fadeOut().next().fadeIn().end().appendTo('.img-wrap');
+	// });
 
-	$('.prev').click(function() {
-	    $('.img-wrap img:first-child').fadeOut();
-	    $('.img-wrap img:last-child').prependTo('.img-wrap').fadeOut();
-	    $('.img-wrap img:first-child').fadeIn();
-	});
+	// $('.prev').click(function() {
+	//     $('.img-wrap img:first-child').fadeOut();
+	//     $('.img-wrap img:last-child').prependTo('.img-wrap').fadeOut();
+	//     $('.img-wrap img:first-child').fadeIn();
+	// });
 	//////////////////////////////
 
 
-	//responsive menu
+	// //responsive menu
 
-	var hamburgerIcon = $("#hamburgerIcon");
-	var xOutMenu = $("#xOut");
+	// var hamburgerIcon = $("#hamburgerIcon");
+	// var xOutMenu = $("#xOut");
 
-	//adds a class of hidden which to hamburgerIcon sets the hamburger icon's dispaly to none, making it invisible
-	  hamburgerIcon.click(function (){
-	    $("nav").toggle();
-	    // $(this).addClass("hidden");
-	    // $(xOutMenu).removeClass("hidden");
-	  });
+	// //adds a class of hidden which to hamburgerIcon sets the hamburger icon's dispaly to none, making it invisible
+	//   hamburgerIcon.click(function (){
+	//     $("nav").toggle();
+	//     // $(this).addClass("hidden");
+	//     // $(xOutMenu).removeClass("hidden");
+	//   });
 
-	  //adds a class of hidden to the X out P tag which sets it's dispaly to none, making it invisible.
-	  $(xOutMenu).click(function () {
-	    $("nav").toggle();
-	    // hamburgerIcon.removeClass("hidden");
-	    // $("nav").addClass("hidden");
-	  });
+	//   //adds a class of hidden to the X out P tag which sets it's dispaly to none, making it invisible.
+	//   $(xOutMenu).click(function () {
+	//     $("nav").toggle();
+	//     // hamburgerIcon.removeClass("hidden");
+	//     // $("nav").addClass("hidden");
+	//   });
 	//////////////////////////////
+
+
+	//lander slideshow
+
+	$(".lander-slideshow img:gt(0)").hide();
+	setInterval(function() { 
+		$('.lander-slideshow img:first-child').fadeOut()
+		.next('img').fadeIn()
+		.end().appendTo('.lander-slideshow');
+	},3000);
+
 
 });
