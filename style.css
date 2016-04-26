@@ -67,6 +67,9 @@ nav a{
   margin-right: 10px;
   color: white;
 }
+a{
+  text-decoration: none;
+}
 nav a:hover{
 	font-weight: 400;
 }
@@ -144,12 +147,15 @@ nav a:hover{
 }
 .thick-small-blue-line{
 	width: 300px;
-	height: 10px;
+	height: 5px;
 	background-color:#1B5887;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 5px;
 	margin-bottom: 5px;
+}
+.non-index-bg{
+  background-color: #1E2123;
 }
 .lander-image-text-container{
   width: 100%;
@@ -170,26 +176,58 @@ nav a:hover{
 .lander-container h3{
   margin: 141px;
 }
-.responsive-nav{
-	display: none;
-}
-#hamburgerIcon{
+.hamburger-menu{
   position: relative;
-  top: 35px;
-  left: 20px;
-  z-index: 2;
   display: none;
   width: 30px;
+  cursor: pointer;
+  vertical-align: top;
+  margin-top: 35px;
+  margin-left: 30px;
 }
-#hamburgerIcon div{
-  height: 5px;
+.hamburger-menu div{
+  height: 2px;
   width: 30px;
   background-color: white;
   border-radius: 1px;
-  margin: 4px 0px 4px 0px;
+  margin: 8px 0px 0px 0px;
 }
-
-
+.responsive-nav{
+  display: none;
+  background-color: #1E2123;
+  height: 250px;
+  width: 100%;
+}
+.responsive-nav-links{
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  font-weight: 100;
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  display: block;
+}
+.responsive-nav-inner{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 3.5;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.x-out{
+  cursor: pointer;
+}
+.x-out p{
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  color: white;  
+}
 
 
 /*---------------------------------------FOOTER---------------------------------------------------------------------------*/
@@ -263,14 +301,14 @@ footer{
 /*---------------------------------------PAGES W/O UNIV STYLING-----------------------------------------------------------*/
 
 .non-homepage-lander-image-container {
-  height: 350;
+  position: relative;
   overflow: hidden;
+  height: 450px;
 }
 .non-homepage-image{
 	width: 100%;
-  -webkit-filter: opacity(.3);
-  filter: opacity(.2);
-  transform: translateY(-50px);
+  -webkit-filter: opacity(.7);
+  filter: opacity(.7);
 }
 .non-lander-body{
 	background-color: #1E2123;
@@ -280,8 +318,8 @@ footer{
 	letter-spacing: .5;
 }
 .alternate-nav{
-	background-color: white;
-	height: 65px;
+    height: 44px;
+    display: inline-block;
 }
 .alternate-nav a{
 	font-weight: 400;
@@ -290,7 +328,7 @@ footer{
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  padding-left: 35px;
+  padding-left: 15px;
   z-index: 99;
 }
 .alternate-nav a{
@@ -299,11 +337,37 @@ footer{
 #header-logo{
   display: inline;
   vertical-align: middle;
-  margin-right: 15px;
   padding-right: 30px;
   border-right: 1px solid black;
 }
-
+.logo-link{
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 30px;
+}
+.non-index-header{
+  background-color: white;
+  height: 75px;
+}
+.alternate-hamburger-menu{
+  position: relative;
+  display: none;
+  width: 30px;
+  cursor: pointer;
+  vertical-align: top;
+  margin-top: 35px;
+  margin-left: 30px;
+}
+.alternate-hamburger-menu div{
+  height: 2px;
+  width: 30px;
+  background-color: #1E2123;
+  border-radius: 1px;
+  margin: 8px 0px 0px 0px;
+}
 
 /* Dropdown Menu */
 .dropbtn {
@@ -356,75 +420,80 @@ footer{
 /*------------------------------------------HOME PAGE---------------------------------------------------------------------*/
 
 #trust-the-results{
-	color: white;
-	font-size: 45px;
-	text-shadow: 1px 1px 1px 1px white;
-	font-weight: 100;
-}
-
-.lander-image-container {
-  position: relative;
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+  text-shadow: 3px 3px 3px rgba(33, 33, 33, 0.31);
+  font-weight: 100;
 }
 
 
+.lander-slideshow{
+  width: 100%;
+  height: 540px;  
+  background-repeat: round;
+  -webkit-animation: lander-slide-show 38s infinite normal; /* Safari 4+ */
+  -moz-animation:    lander-slide-show 38s infinite normal; /* Fx 5+ */
+  -o-animation:      lander-slide-show 38s infinite normal; /* Opera 12+ */
+  animation:         lander-slide-show 38s infinite normal; /* IE 10+, Fx 29+ */
+}
 @-webkit-keyframes lander-slide-show {
   0%   { background-image: url('imgs/law firm-1.jpg'); }
-  12.5%   { background-image: url('imgs/law firm-2.jpg'); }
-  37.5%   { background-image: url('imgs/law firm-3.jpg'); }
-  50%   { background-image: url('imgs/law firm-4.jpg'); }
-  62.5% { background-image: url('imgs/law firm-5.jpg'); }
+  15%   { background-image: url('imgs/law firm-2.jpg'); }
+  30%   { background-image: url('imgs/law firm-3.jpg'); }
+  45%   { background-image: url('imgs/law firm-4.jpg'); }
+  60% { background-image: url('imgs/law firm-5.jpg'); }
   75% { background-image: url('imgs/law firm-6.jpg'); }
-  87.5% { background-image: url('imgs/law firm-7.jpg'); }
+  90% { background-image: url('imgs/law firm-7.jpg'); }
   100% { background-image: url('imgs/law firm-8.jpg'); }
 
 }
 @-moz-keyframes lander-slide-show {
   0%   { background-image: url('imgs/law firm-1.jpg'); }
-  12.5%   { background-image: url('imgs/law firm-2.jpg'); }
-  37.5%   { background-image: url('imgs/law firm-3.jpg'); }
-  50%   { background-image: url('imgs/law firm-4.jpg'); }
-  62.5% { background-image: url('imgs/law firm-5.jpg'); }
+  15%   { background-image: url('imgs/law firm-2.jpg'); }
+  30%   { background-image: url('imgs/law firm-3.jpg'); }
+  45%   { background-image: url('imgs/law firm-4.jpg'); }
+  60% { background-image: url('imgs/law firm-5.jpg'); }
   75% { background-image: url('imgs/law firm-6.jpg'); }
-  87.5% { background-image: url('imgs/law firm-7.jpg'); }
+  90% { background-image: url('imgs/law firm-7.jpg'); }
   100% { background-image: url('imgs/law firm-8.jpg'); }
 
 }
 @-o-keyframes lander-slide-show {
   0%   { background-image: url('imgs/law firm-1.jpg'); }
-  12.5%   { background-image: url('imgs/law firm-2.jpg'); }
-  37.5%   { background-image: url('imgs/law firm-3.jpg'); }
-  50%   { background-image: url('imgs/law firm-4.jpg'); }
-  62.5% { background-image: url('imgs/law firm-5.jpg'); }
+  15%   { background-image: url('imgs/law firm-2.jpg'); }
+  30%   { background-image: url('imgs/law firm-3.jpg'); }
+  45%   { background-image: url('imgs/law firm-4.jpg'); }
+  60% { background-image: url('imgs/law firm-5.jpg'); }
   75% { background-image: url('imgs/law firm-6.jpg'); }
-  87.5% { background-image: url('imgs/law firm-7.jpg'); }
+  90% { background-image: url('imgs/law firm-7.jpg'); }
   100% { background-image: url('imgs/law firm-8.jpg'); }
 
 }
 @keyframes lander-slide-show {
   0%   { background-image: url('imgs/law firm-1.jpg'); }
-  12.5%   { background-image: url('imgs/law firm-2.jpg'); }
-  37.5%   { background-image: url('imgs/law firm-3.jpg'); }
-  50%   { background-image: url('imgs/law firm-4.jpg'); }
-  62.5% { background-image: url('imgs/law firm-5.jpg'); }
+  15%   { background-image: url('imgs/law firm-2.jpg'); }
+  30%   { background-image: url('imgs/law firm-3.jpg'); }
+  45%   { background-image: url('imgs/law firm-4.jpg'); }
+  60% { background-image: url('imgs/law firm-5.jpg'); }
   75% { background-image: url('imgs/law firm-6.jpg'); }
-  87.5% { background-image: url('imgs/law firm-7.jpg'); }
+  90% { background-image: url('imgs/law firm-7.jpg'); }
   100% { background-image: url('imgs/law firm-8.jpg'); }
 }
-.lander-slideshow{
-	width: 100%;
-	height: 540px;	
-	background-repeat: round;
-	-webkit-animation: lander-slide-show 32s linear infinite normal; /* Safari 4+ */
-	-moz-animation:    lander-slide-show 32s linear infinite normal; /* Fx 5+ */
-	-o-animation:      lander-slide-show 32s linear infinite normal; /* Opera 12+ */
-	animation:         lander-slide-show 32s linear infinite normal; /* IE 10+, Fx 29+ */
-}
+
 .text-overlay-image-container {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
+}
+.lander-image-container {
+  position: relative;
+  overflow: hidden;
+}
+.lander-image{
+  width: 100%;
+  height: auto;
 }
 #home-page-body{
 	background-color: white;
@@ -488,10 +557,9 @@ footer{
   margin-bottom: 20px;
 }
 #about-trust{
-	font-size: 50px;
+	font-size: 30px;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-style: italic;
+  letter-spacing: 2.5px;
   font-weight: 100;
 }
 #about-orgz-box{
@@ -523,25 +591,28 @@ footer{
   66%   { background-image: url('imgs/bronx3.jpg'); }
   100%   { background-image: url('imgs/bronx4.jpg'); }
 }
-@-webkit-keyframes lander-slide-show {
+@-webkit-keyframes about-slide-show {
   0%   { background-image: url('imgs/bronx1.jpg'); }
   33%   { background-image: url('imgs/bronx2.jpg'); }
   66%   { background-image: url('imgs/bronx3.jpg'); }
   100%   { background-image: url('imgs/bronx4.jpg'); }
 }
-@-moz-keyframes lander-slide-show {
+@-moz-keyframes about-slide-show {
   0%   { background-image: url('imgs/bronx1.jpg'); }
   33%   { background-image: url('imgs/bronx2.jpg'); }
   66%   { background-image: url('imgs/bronx3.jpg'); }
   100%   { background-image: url('imgs/bronx4.jpg'); }
 }
-@-o-keyframes lander-slide-show {
+@-o-keyframes about-slide-show {
   0%   { background-image: url('imgs/bronx1.jpg'); }
   33%   { background-image: url('imgs/bronx2.jpg'); }
   66%   { background-image: url('imgs/bronx3.jpg'); }
   100%   { background-image: url('imgs/bronx4.jpg'); }
 }
 
+#slideshow-text-container p{
+  text-align: center;
+}
 
 
 
@@ -568,7 +639,7 @@ footer{
   margin-bottom: 0px;
   color: white;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 32px;
   letter-spacing: 4.5px;
 }
 #overview-services-link-box{
@@ -612,46 +683,32 @@ footer{
 .results-container{
   margin-bottom: 50px;
   text-align: center;
-  width: 700px;
+  width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 .individual-result-container{
 	text-align: center;
 	display: inline-block;
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 15px;
-  margin-bottom: 15px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+  margin-bottom: 10px;
+  width: 800px;
+}
+.individual-result-container p{
+  width: 800px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .individual-result-container h5{
-	margin: 0;
-	font-size: 30px;
+  width: 800px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-.blue-results-box{
-	background-color: #1B5887;
-
+.individual-result-container div{
+  width: 100%;
 }
-.clear-results-box, .blue-results-box{
-	width: 70%;
-	text-align: center;
-	height: 200px;
-	margin-right: auto;
-	margin-left: auto;
-}
-.clear-results-box h5, .blue-results-box h5{
-	color: white;
-	margin-top: 0px;
-  margin-bottom: 0px;
-  padding-top: 40px;
-}
-.clear-results-box p, .blue-results-box p{
-  width: 800;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 /*--------------------------------------END RESULTS-----------------------------------------------------------------------*/
 
 
@@ -720,8 +777,8 @@ footer{
 	margin-top: 0px;
 }
 
-.attorney-box h5{
-	margin-bottom: 10px;
+.attorney-container h4{
+	margin-bottom: 0px;
 }
 .attorney-photo{
 	width: 350px;
@@ -740,6 +797,12 @@ footer{
   padding-right: 15px;
   border-left: 3px solid #1B5887;
 }
+.atty-email{
+  color: #1B5887; 
+  font-family: 'Quattrocento', serif;
+  font-weight: 400;
+  font-size: 15px;
+}
 .attorney-photo-container{
   width: 350px;
   height: 350px;
@@ -747,6 +810,10 @@ footer{
   float: left;
   margin-right: 20px;
   margin-bottom: 15px;
+}
+#frank .attorney-photo-container {
+  height: 205px;
+  margin-bottom: 0px;
 }
 
 
@@ -762,9 +829,20 @@ footer{
   }
   /*------ END ABOUT ------*/
 }
-
-
+@media only screen and (min-width: 1025px) {
+  /*------ HOME ------*/
+  .lander-slideshow {
+    height: 655px;
+  }
+  /*------ END HOME ------*/
+}
 @media only screen and (max-width: 990px) {
+  /*------ HOME ------*/
+  #trust-the-results {
+    font-size: 50px;
+  }
+  /*------ END HOME ------*/
+
   /*------ ATTORNEYS ------*/
   .attorney-side-text {
     display: inline-block;
@@ -792,7 +870,79 @@ footer{
     margin-right: 30px;
     margin-bottom: 20px;
   }
+  #frank .attorney-photo-container {
+    height: 205px;
+    margin-bottom: 10px;
+  }
   /*------ END ATTORNEYS ------*/
+
+  /*------ RESULTS ------*/
+  .results-container{
+    margin-bottom: 50px;
+    text-align: center;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .individual-result-container{
+    text-align: center;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 600px;
+  }
+  .individual-result-container p{
+    width: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .individual-result-container h5{
+    width: 600px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /*------ END RESULTS ------*/
+}
+@media only screen and (max-width: 935px) {
+  .non-homepage-lander-image-container {
+    height: inherit;
+  }
+  .non-homepage-lander-image-container h3{
+    font-size: 45px;
+  }  
+}
+
+@media only screen and (max-width: 830px) {
+  /*------ HOME ------*/
+  #trust-the-results {
+    font-size: 45px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text-overlay-image-container{
+    top: 50%;
+  }
+  /*------ END HOME ------*/
+  .alternate-nav{
+    display: none;
+  }
+  .alternate-hamburger-menu{
+    display: inline-block;
+    margin-left: 0px;
+    margin-top: 0px;
+    float: right;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+    margin-right: 25px;
+  }
+  #header-logo{
+    border-right: none;
+  }
+
 }
 
 
@@ -812,10 +962,13 @@ footer{
   
   /*------HOME------*/
   #home-page-logo{
-    width: 605px;
+    width: 550px;
   }
   #lander-philosophy-box p{
     width: 655px;
+  }
+  .lander-slideshow {
+    height: 480px;
   }
   /*------END HOME------*/
 
@@ -845,7 +998,37 @@ footer{
   #about-orgz-box{
     width: 500px;
   }
-  /*------END ABOUT------*/  
+  /*------END ABOUT------*/
+
+
+  /*------ RESULTS ------*/
+  .results-container{
+    margin-bottom: 50px;
+    text-align: center;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .individual-result-container{
+    text-align: center;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 520px;
+  }
+  .individual-result-container p{
+    width: 520px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .individual-result-container h5{
+    width: 520px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /*------ END RESULTS ------*/  
 }
 
 
@@ -867,12 +1050,6 @@ footer{
   }
   /*------END FOOTER------*/
 
-  
-  /*------RESULTS------*/
-  .results-container{
-    width: 400px;
-  }
-  /*------END RESULTS------*/
 
 
   /*------ ATTORNEYS------*/
@@ -903,6 +1080,21 @@ footer{
 	.thick-orange-divider-line{
 		width: 455px;
 	}
+  .nav-container{
+    display: none;
+  }
+  #home-page-nav nav {
+    margin-top: 15px;
+  }
+  .hamburger-menu{
+    display: inline-block;
+  }
+  #home-page-logo{
+    display: inline;
+  }
+  #home-page-nav{
+    height: 115px;
+  }
   /*------END UNIVERSAL STYLING------*/
 
 
@@ -910,7 +1102,7 @@ footer{
   .footer-address-line {
     padding-left: 0px;
     padding-right: 0px;
-    margin: 10;
+    margin: 10px;
     color: #1E2123 !important;
     vertical-align: top;
   }
@@ -919,7 +1111,6 @@ footer{
     vertical-align: top;
     margin-left: 20px;
     margin-right: 20px;
-}
   }
   .address-container{
     width: 300px;
@@ -932,12 +1123,43 @@ footer{
     font-size: 35px;
   }
   #home-page-logo{
-    width: 440px;
+    width: 370px;
   }
   #lander-philosophy-box p{
     width: 455px;
   }
   /*------END HOME------*/
+
+
+
+  /*------RESULTS------*/
+    .results-container{
+    margin-bottom: 50px;
+    text-align: center;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .individual-result-container{
+    text-align: center;
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 330px;
+  }
+  .individual-result-container p{
+    width: 330px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .individual-result-container h5{
+    width: 330px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  /*------END RESULTS------*/
 }
 
 
@@ -985,10 +1207,20 @@ footer{
     width: 350px;
     height: auto;
   }
-  #about-trust {
-    font-size: 40px;
-  }
   /*------ END ABOUT ------*/
+
+
+  /*------ PRACTICE AREAS ------*/
+  #practice-areas-link-box{
+    width: 400px;
+  }
+  #practice-areas-link-box h5{
+    font-size: 28px;
+  }
+  #overview-services-link-box {
+    width: 350px;
+  }
+  /*------ END PRACTICE AREAS ------*/
 
 }
 
@@ -1005,7 +1237,7 @@ footer{
 		width: 355px;
 	}
 	#home-page-nav{
-		height: 200px;
+		height: 100px;
 	}
 	#home-page-nav nav {
     margin-top: 30px;
@@ -1020,22 +1252,25 @@ footer{
 
 
   /*------NON-UNIVERSAL STYLING------*/
-  .non-homepage-image{
+/*  .non-homepage-image{
     width: auto;
     height: 100%;
-  }
+  }*/
   /*------END NON-UNIVERSAL STYLING------*/
 
 
   /*------HOME------*/
   #trust-the-results{
-    font-size: 26px;
+    font-size: 35px;
   }
   #home-page-logo{
-    width: 360px;
+    width: 290px;
   }
   #lander-philosophy-box p{
     width: 355px;
+  }
+  .lander-slideshow {
+    height: 320px;
   }
   /*------END HOME------*/
 
