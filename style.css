@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Quattrocento);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,900,700,300);
 body{
-	margin: 0px;
+	margin: 0;
 }
 h1{
   font-family: 'Oswald', sans-serif;
@@ -23,7 +23,7 @@ h3{
 	font-family: 'Oswald', sans-serif;
   font-weight: 400;
   font-size: 50px;
-  letter-spacing: 1;
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: white;
 }
@@ -50,7 +50,7 @@ h6{
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 40;
+  margin: 40px;
 }
 p{
 	font-family: 'Quattrocento', serif;
@@ -199,7 +199,7 @@ nav a:hover{
   width: 30px;
   background-color: white;
   border-radius: 1px;
-  margin: 8px 0px 0px 0px;
+  margin: 8px 0 0 0;
 }
 .responsive-nav{
   display: none;
@@ -248,7 +248,7 @@ footer{
 }
 footer h4{
   background-color: #1B5887;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -281,14 +281,14 @@ footer h4{
   margin-right: 80px;
 }
 .footer-icon-container{
-	height: 31.5;
+	height: 31.5px;
   background-color: #1E2123;
-  margin-bottom: 50;
+  margin-bottom: 50px;
 }
 .index-footer-icon-container{
-  height: 31.5;
+  height: 31.5px;
 	background-color: white;
-  margin-bottom: 50;
+  margin-bottom: 50px;
 }
 .index-footer{
 	background-color: #1E2123;
@@ -296,9 +296,13 @@ footer h4{
 .index-footer p{
 	color: white !important;
 }
-#footer-number{
+.footer-number{
 	color: white;
 	text-decoration: none;
+}
+.non-index-footer-num{
+  color: #1E2123;
+  text-decoration: none;
 }
 
 
@@ -320,17 +324,21 @@ footer h4{
   overflow: hidden;
   height: 450px;
 }
+.non-homepage-lander-image-container h3{
+  font-size: 40px;
+}
 .non-homepage-image{
 	width: 100%;
   -webkit-filter: opacity(.7);
   filter: opacity(.7);
+  transform: translateY(-90px);
 }
 .non-lander-body{
 	background-color: #1E2123;
 }
 .non-lander-body p{
 	color: white;
-	letter-spacing: .5;
+	letter-spacing: .5px;
 }
 .alternate-nav{
     height: 44px;
@@ -381,7 +389,7 @@ footer h4{
   width: 30px;
   background-color: #1E2123;
   border-radius: 1px;
-  margin: 8px 0px 0px 0px;
+  margin: 8px 0 0 0;
 }
 
 /* Dropdown Menu */
@@ -406,7 +414,7 @@ footer h4{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 .dropdown-content a {
   color: black;
@@ -436,75 +444,82 @@ footer h4{
 
 #trust-the-results{
   color: rgb(255, 255, 255);
-  font-size: 60px;
+  font-size: 58px;
   text-shadow: 3px 3px 3px rgba(33, 33, 33, 0.31);
   font-weight: 100;
 }
-
-
-.lander-slideshow{
-  width: 700px;
-  height: 530px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  background-repeat: round;
-  -webkit-animation: lander-slide-show 38s infinite normal; /* Safari 4+ */
-  -moz-animation:    lander-slide-show 38s infinite normal; /* Fx 5+ */
-  -o-animation:      lander-slide-show 38s infinite normal; /* Opera 12+ */
-  animation:         lander-slide-show 38s infinite normal; /* IE 10+, Fx 29+ */
-}
-@-webkit-keyframes lander-slide-show {
-  0%   { background-image: url('imgs/law firm-1.jpg'); }
-  15%   { background-image: url('imgs/law firm-2.jpg'); }
-  30%   { background-image: url('imgs/law firm-3.jpg'); }
-  45%   { background-image: url('imgs/law firm-4.jpg'); }
-  60% { background-image: url('imgs/law firm-5.jpg'); }
-  75% { background-image: url('imgs/law firm-6.jpg'); }
-  90% { background-image: url('imgs/law firm-7.jpg'); }
-  100% { background-image: url('imgs/law firm-8.jpg'); }
-
-}
-@-moz-keyframes lander-slide-show {
-  0%   { background-image: url('imgs/law firm-1.jpg'); }
-  15%   { background-image: url('imgs/law firm-2.jpg'); }
-  30%   { background-image: url('imgs/law firm-3.jpg'); }
-  45%   { background-image: url('imgs/law firm-4.jpg'); }
-  60% { background-image: url('imgs/law firm-5.jpg'); }
-  75% { background-image: url('imgs/law firm-6.jpg'); }
-  90% { background-image: url('imgs/law firm-7.jpg'); }
-  100% { background-image: url('imgs/law firm-8.jpg'); }
-
-}
-@-o-keyframes lander-slide-show {
-  0%   { background-image: url('imgs/law firm-1.jpg'); }
-  15%   { background-image: url('imgs/law firm-2.jpg'); }
-  30%   { background-image: url('imgs/law firm-3.jpg'); }
-  45%   { background-image: url('imgs/law firm-4.jpg'); }
-  60% { background-image: url('imgs/law firm-5.jpg'); }
-  75% { background-image: url('imgs/law firm-6.jpg'); }
-  90% { background-image: url('imgs/law firm-7.jpg'); }
-  100% { background-image: url('imgs/law firm-8.jpg'); }
-
-}
-@keyframes lander-slide-show {
-  0%   { background-image: url('imgs/law firm-1.jpg'); }
-  15%   { background-image: url('imgs/law firm-2.jpg'); }
-  30%   { background-image: url('imgs/law firm-3.jpg'); }
-  45%   { background-image: url('imgs/law firm-4.jpg'); }
-  60% { background-image: url('imgs/law firm-5.jpg'); }
-  75% { background-image: url('imgs/law firm-6.jpg'); }
-  90% { background-image: url('imgs/law firm-7.jpg'); }
-  100% { background-image: url('imgs/law firm-8.jpg'); }
-}
-
 .text-overlay-image-container {
   position: absolute;
-  top: 45%;
+  top: 20%;
+  /*transform: translateY(-35%);*/
+  width: 100%;
+  text-align: center;
+}
+.non-lander-text-overlay-container {
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   width: 100%;
   text-align: center;
 }
+
+.lander-slideshow{
+  width: 700px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  background-repeat: round;
+  -webkit-animation: lander-slide-show 25s infinite normal; /* Safari 4+ */
+  -moz-animation:    lander-slide-show 25s infinite normal; /* Fx 5+ */
+  -o-animation:      lander-slide-show 25s infinite normal; /* Opera 12+ */
+  animation:         lander-slide-show 25s infinite normal; /* IE 10+, Fx 29+ */
+}
+@-webkit-keyframes lander-slide-show {
+  0%   { background-image: url('imgs/lawfirm-1.jpg'); }
+  15%   { background-image: url('imgs/lawfirm-2.jpg'); }
+  30%   { background-image: url('imgs/lawfirm-3.jpg'); }
+  45%   { background-image: url('imgs/lawfirm-4.jpg'); }
+  60% { background-image: url('imgs/lawfirm-5.jpg'); }
+  75% { background-image: url('imgs/lawfirm-6.jpg'); }
+  90% { background-image: url('imgs/lawfirm-7.jpg'); }
+  100% { background-image: url('imgs/lawfirm-8.jpg'); }
+
+}
+@-moz-keyframes lander-slide-show {
+  0%   { background-image: url('imgs/lawfirm-1.jpg'); }
+  15%   { background-image: url('imgs/lawfirm-2.jpg'); }
+  30%   { background-image: url('imgs/lawfirm-3.jpg'); }
+  45%   { background-image: url('imgs/lawfirm-4.jpg'); }
+  60% { background-image: url('imgs/lawfirm-5.jpg'); }
+  75% { background-image: url('imgs/lawfirm-6.jpg'); }
+  90% { background-image: url('imgs/lawfirm-7.jpg'); }
+  100% { background-image: url('imgs/lawfirm-8.jpg'); }
+
+}
+@-o-keyframes lander-slide-show {
+  0%   { background-image: url('imgs/lawfirm-1.jpg'); }
+  15%   { background-image: url('imgs/lawfirm-2.jpg'); }
+  30%   { background-image: url('imgs/lawfirm-3.jpg'); }
+  45%   { background-image: url('imgs/lawfirm-4.jpg'); }
+  60% { background-image: url('imgs/lawfirm-5.jpg'); }
+  75% { background-image: url('imgs/lawfirm-6.jpg'); }
+  90% { background-image: url('imgs/lawfirm-7.jpg'); }
+  100% { background-image: url('imgs/lawfirm-8.jpg'); }
+
+}
+@keyframes lander-slide-show {
+  0%   { background-image: url('imgs/lawfirm-1.jpg'); }
+  15%   { background-image: url('imgs/lawfirm-2.jpg'); }
+  30%   { background-image: url('imgs/lawfirm-3.jpg'); }
+  45%   { background-image: url('imgs/lawfirm-4.jpg'); }
+  60% { background-image: url('imgs/lawfirm-5.jpg'); }
+  75% { background-image: url('imgs/lawfirm-6.jpg'); }
+  90% { background-image: url('imgs/lawfirm-7.jpg'); }
+  100% { background-image: url('imgs/lawfirm-8.jpg'); }
+}
+
+
 .lander-image-container {
   position: relative;
   overflow: hidden;
@@ -515,7 +530,7 @@ footer h4{
 }
 #home-page-body{
 	background-color: white;
-	margin: 0px;
+	margin: 0;
 	text-align: center;
 }
 #home-page-nav{
@@ -587,7 +602,7 @@ footer h4{
 	margin-right: auto;
 }
 #about-orgz-box img{
-  width: 300px;
+  width: 250px;
   height: auto;
   margin-left: 25px;
   margin-right: 25px;
@@ -603,10 +618,10 @@ footer h4{
 	margin-right: auto;
 	margin-top: 50px;
 	background-repeat: round;
-	-webkit-animation: about-slide-show 10s linear infinite normal; /* Safari 4+ */
-	-moz-animation:    about-slide-show 10s linear infinite normal; /* Fx 5+ */
-	-o-animation:      about-slide-show 10s linear infinite normal; /* Opera 12+ */
-	animation:         about-slide-show 10s linear infinite normal; /* IE 10+, Fx 29+ */
+	-webkit-animation: about-slide-show 10s ease-out infinite normal; /* Safari 4+ */
+	-moz-animation:    about-slide-show 10s ease-out infinite normal; /* Fx 5+ */
+	-o-animation:      about-slide-show 10s ease-out infinite normal; /* Opera 12+ */
+	animation:         about-slide-show 10s ease-out infinite normal; /* IE 10+, Fx 29+ */
 }
 @keyframes about-slide-show {
   0%   { background-image: url('imgs/bronx1.jpg'); }
@@ -634,7 +649,7 @@ footer h4{
 }
 
 #slideshow-text-container p{
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -658,8 +673,8 @@ footer h4{
 }
 #practice-areas-link-box h5{
   padding-top: 20px;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: white;
   text-transform: uppercase;
   font-size: 32px;
@@ -667,7 +682,7 @@ footer h4{
 }
 #overview-services-link-box{
   list-style: none;
-  padding-left: 0px;
+  padding-left: 0;
   width: 410px;
   margin-left: auto;
   margin-right: auto;
@@ -728,6 +743,9 @@ footer h4{
   width: 800px;
   margin-top: 10px;
   margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #EA5A3B;
 }
 .individual-result-container div{
   width: 100%;
@@ -763,17 +781,14 @@ footer h4{
   margin-bottom: 100px;
 }
 .contact-box{
-	margin-top: 35px;
-	margin-bottom: 35px;
-	margin-left: 25px;
-  margin-right: 25px;
+  margin: 35px 25px 35px 25px;
   text-align: left;
   display: inline-block;
   vertical-align: top;
 }
 .contact-box h5{
 	color: white;
-	margin: 0px;
+	margin: 0;
 }
 .bold-location{
 	font-size: 30px;
@@ -789,19 +804,9 @@ footer h4{
 /*--------------------------------------ATTORNEYS-----------------------------------------------------------------------*/
 
 
-.attorney-side-text{
-	display: inline-block;
-  width: 650px;
-  margin-left: 25px;
-  border-left: 2px solid #1B5887;
-  padding-left: 15px;
-}
-.attorney-side-text h4{
-	margin-top: 0px;
-}
 
 .attorney-container h4{
-	margin-bottom: 0px;
+	margin-bottom: 0;
 }
 .attorney-photo{
 	width: 350px;
@@ -821,7 +826,7 @@ footer h4{
   border-left: 3px solid #1B5887;
 }
 .atty-email{
-  color: #1B5887; 
+  color: #EA5A3B; 
   font-family: 'Quattrocento', serif;
   font-weight: 400;
   font-size: 15px;
@@ -836,12 +841,16 @@ footer h4{
 }
 #frank .attorney-photo-container {
   height: 205px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 
 /*--------------------------------------END ATTORNEYS-----------------------------------------------------------------------*/
-
+@media only screen and (max-width: 1045px) {
+  .non-homepage-image{
+    transform: translateY(0px);
+  }
+}
 @media only screen and (max-width: 1025px) {
   /*------ ABOUT ------*/  
   .about-paragraph-1{
@@ -851,6 +860,7 @@ footer h4{
     width: 700px;
   }
   /*------ END ABOUT ------*/
+
 }
 @media only screen and (max-width: 990px) {
   /*------ HOME ------*/
@@ -860,16 +870,6 @@ footer h4{
   /*------ END HOME ------*/
 
   /*------ ATTORNEYS ------*/
-  .attorney-side-text {
-    display: inline-block;
-    width: 600px;
-    border-left: 4px solid #1B5887;
-    padding-left: 15px;
-    margin-left: 0px;
-  }
-  .attorney-side-text p{
-    width: 600px;
-  }
   .attorney-inner-container {
       width: 600px;
   }
@@ -878,7 +878,7 @@ footer h4{
     height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40;
+    margin-bottom: 40px;
   }
   .attorney-photo-container{
     width: 400px;
@@ -938,17 +938,14 @@ footer h4{
     margin-left: auto;
     margin-right: auto;
   }
-  .text-overlay-image-container{
-    top: 50%;
-  }
   /*------ END HOME ------*/
   .alternate-nav{
     display: none;
   }
   .alternate-hamburger-menu{
     display: inline-block;
-    margin-left: 0px;
-    margin-top: 0px;
+    margin-left: 0;
+    margin-top: 0;
     float: right;
     top: 50%;
     position: relative;
@@ -1007,7 +1004,7 @@ footer h4{
   }
   .about-paragraph-1 img{
     float: none;
-    margin-right: 0px;
+    margin-right: 0;
   }
   .thin-large-grey-divider-line{
     width: 325px;
@@ -1052,8 +1049,8 @@ footer h4{
 @media only screen and (max-width: 700px) {
   /*------FOOTER------*/
   .footer-address-line {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     margin: 10;
     color: #1E2123 !important;
     vertical-align: top;
@@ -1070,15 +1067,6 @@ footer h4{
 
 
   /*------ ATTORNEYS------*/
-  .attorney-side-text {
-    display: inline-block;
-    width: 450px;
-    border-left: 4px solid #1B5887;
-    padding-left: 15px;
-  }
-  .attorney-side-text p{
-    width: 450px;
-  }
   .attorney-inner-container {
       width: 450px;
   }
@@ -1117,8 +1105,8 @@ footer h4{
 
   /*------FOOTER------*/
   .footer-address-line {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
     margin: 10px;
     color: #1E2123 !important;
     vertical-align: top;
@@ -1216,7 +1204,7 @@ footer h4{
   }
   .about-paragraph-1 img{
     width: 350px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
   .thin-large-grey-divider-line{
     width: 325px;
@@ -1225,7 +1213,7 @@ footer h4{
     width: 400px;
   }
   #about-orgz-box img {
-    width: 350px;
+    width: 320px;
     height: auto;
   }
   /*------ END ABOUT ------*/
@@ -1269,12 +1257,15 @@ footer h4{
     margin-right: 10px;
     line-height: 2.5;
 	}
+  .non-homepage-lander-image-container h3{
+    font-size: 35px;
+  }
   /*------END UNIVERSAL STYLING------*/
 
 
   /*------HOME------*/
   #trust-the-results{
-    font-size: 35px;
+    font-size: 30px;
   }
   #home-page-logo{
     width: 290px;
@@ -1290,15 +1281,6 @@ footer h4{
 
 
   /*------ATTORNEYS------*/
-  .attorney-side-text {
-    display: inline-block;
-    width: 350px;
-    border-left: 4px solid #1B5887;
-    padding-left: 15px;
-  }
-  .attorney-side-text p{
-    width: 330px;
-  }
   .attorney-inner-container {
       width: 350px;
   }

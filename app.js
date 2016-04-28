@@ -1,12 +1,6 @@
 $(document).ready(function() {
 	
 	//////////////////////////////
-	//FADE OPACITY LANDER PHOTO ON SCROLL
-	$(window).scroll(function(){
-	    $(".lander-image-container").css("opacity", 1 - $(window).scrollTop() / 900);
-	});
-
-	//////////////////////////////
 	//FADE OPACITY OF NON LANDER IMG HEADER
 	$(window).scroll(function(){
 	    $(".non-homepage-image").css("opacity", 1 - $(window).scrollTop() / 1900);
