@@ -31,4 +31,27 @@ $(document).ready(function() {
 	alternateHamburgerMenu.click(function () {
 		$(".responsive-nav").slideToggle(500);
 	});
+
+
+
+
+	$('.about-slideshow img:gt(0)').hide();
+	$(function(){
+   		$('.about-slideshow img:gt(0)').hide();
+    	setInterval(function(){
+      		$('.about-slideshow :first-child').fadeOut()
+         	.next('img').fadeIn()
+         	.end().appendTo('.about-slideshow');}, 
+    	3000);
+	});
+
+	$('.lander-slideshow img:gt(0)').hide();
+	$(function(){
+   		$('.lander-slideshow img:gt(0)').hide();
+    	setInterval(function(){
+      		$('.lander-slideshow :first-child').fadeOut()
+         	.next('img').fadeIn()
+         	.end().appendTo('.lander-slideshow');}, 
+    	3000);
+	});
 });
