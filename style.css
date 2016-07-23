@@ -4,6 +4,15 @@
 body{
 	margin: 0;
 }
+a{
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+img{
+  outline: none;
+  border: none;
+}
 h1{
   font-family: 'Oswald', sans-serif;
   font-size: 50px;
@@ -13,7 +22,7 @@ h1{
   letter-spacing: 3.5px;
 }
 h2{
-	font-family: 'Copperplate', serif;
+	font-family: 'Copperplate Light', 'Copperplate Gothic Light' serif;
 	color: black;
 	font-size: 40px;
 	letter-spacing: 2px;
@@ -26,9 +35,6 @@ h3{
   letter-spacing: 1px;
   text-transform: uppercase;
   color: white;
-}
-.orangeh3{
-	color: #EA5A3B;
 }
 h4{
 	font-family: 'Copperplate', serif;
@@ -58,7 +64,6 @@ p{
 }
 nav a{
   font-family: 'Lato', sans-serif;
-  text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3.5px;
   font-weight: 100;
@@ -66,9 +71,6 @@ nav a{
   margin-left: 10px;
   margin-right: 10px;
   color: white;
-}
-a{
-  text-decoration: none;
 }
 nav a:hover{
 	font-weight: 400;
@@ -181,7 +183,6 @@ nav a:hover{
 	overflow: hidden;
 	height: 350px;
 }
-
 .lander-container h3{
   margin: 141px;
 }
@@ -279,6 +280,8 @@ footer h4{
   vertical-align: top;
   margin-left: 80px;
   margin-right: 80px;
+  border: none;
+  outline: none;
 }
 .footer-icon-container{
 	height: 31.5px;
@@ -330,11 +333,6 @@ footer h4{
 .non-homepage-image{
 	width: 100%;
   transform: translateY(-90px);
-  -webkit-filter: opacity(.7);
-  -mox-filter: opacity(.7);
-  -o-filter: opacity(.7);
-  -ms-filter: opacity(.7);
-  filter: opacity(.7);
 }
 .non-lander-body{
 	background-color: #1E2123;
@@ -344,8 +342,13 @@ footer h4{
 	letter-spacing: .5px;
 }
 .alternate-nav{
-    height: 44px;
-    display: inline-block;
+  height: 44px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 99;
 }
 .alternate-nav a{
 	font-weight: 400;
@@ -425,7 +428,9 @@ footer h4{
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1
+}
 .dropdown:hover .dropdown-content {
   display: block;
 }
@@ -677,12 +682,12 @@ footer h4{
   width: 800px;
 }
 .individual-result-container p{
-  width: 800px;
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 .individual-result-container h5{
-  width: 800px;
+  width: 100%;
   margin-top: 10px;
   margin-bottom: 10px;
   letter-spacing: 1px;
@@ -692,6 +697,8 @@ footer h4{
 .individual-result-container div{
   width: 100%;
 }
+
+
 /*--------------------------------------END RESULTS-----------------------------------------------------------------------*/
 
 
@@ -746,7 +753,19 @@ footer h4{
 /*--------------------------------------ATTORNEYS-----------------------------------------------------------------------*/
 
 
-
+.atty-photo-container{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.atty-photo-container img{
+  width: 650px;
+  height: auto;
+  padding: 20px;
+  background-color: rgba(191, 191, 191, 0.03);
+}
 .attorney-container h4{
 	margin-bottom: 0;
 }
@@ -788,6 +807,14 @@ footer h4{
 
 
 /*--------------------------------------END ATTORNEYS-----------------------------------------------------------------------*/
+@media only screen and (min-width: 1550px) {
+  #about-lander-img{
+    transform: translateY(-190px);
+  }
+  #atty-lander-img{
+  transform: translateY(-200px) !important;
+  }
+}
 @media only screen and (max-width: 1045px) {
   .non-homepage-image{
     transform: translateY(0px);
@@ -852,12 +879,10 @@ footer h4{
     width: 600px;
   }
   .individual-result-container p{
-    width: 600px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
   .individual-result-container h5{
-    width: 600px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -880,6 +905,7 @@ footer h4{
     margin-left: auto;
     margin-right: auto;
   }
+
   /*------ END HOME ------*/
   .alternate-nav{
     display: none;
@@ -897,6 +923,12 @@ footer h4{
   #header-logo{
     border-right: none;
   }
+  
+  /*------ ATTORNEYS ------*/
+  .atty-photo-container img{
+    width: 550px;
+  }
+  /*------ END ATTORNEYS ------*/
 
 }
 
@@ -916,9 +948,6 @@ footer h4{
 
   
   /*------HOME------*/
-  #home-page-logo{
-    width: 550px;
-  }
   #lander-philosophy-box p{
     width: 645px;
   }
@@ -975,12 +1004,10 @@ footer h4{
     width: 520px;
   }
   .individual-result-container p{
-    width: 520px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
   .individual-result-container h5{
-    width: 520px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -1065,6 +1092,13 @@ footer h4{
   /*------END FOOTER------*/
 
 
+  /*------ ATTORNEYS ------*/
+  .atty-photo-container img{
+    width: 450px;
+  }
+  /*------ END ATTORNEYS ------*/
+
+
   /*------HOME------*/
   #trust-the-results{
     font-size: 35px;
@@ -1101,12 +1135,10 @@ footer h4{
     width: 330px;
   }
   .individual-result-container p{
-    width: 330px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
   .individual-result-container h5{
-    width: 330px;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -1173,6 +1205,13 @@ footer h4{
   }
   /*------ END PRACTICE AREAS ------*/
 
+
+  /*------ ATTORNEYS ------*/
+  .atty-photo-container img{
+    width: 400px;
+  }
+  /*------ END ATTORNEYS ------*/
+
 }
 
 
@@ -1233,7 +1272,7 @@ footer h4{
     font-size: 30px;
   }
   #home-page-logo{
-    width: 290px;
+    width: 284px;
   }
   #lander-philosophy-box p{
     width: 355px;
@@ -1271,7 +1310,128 @@ footer h4{
     margin-right: auto;
     margin-bottom: 40;
   }
+  .atty-photo-container img{
+    width: 310px;
+    padding: 10px;
+  }
   /*------END ATTORNEYS------*/
 
+}
+
+@media only screen and (max-width: 350px) {
+  
+  /*------ HOME------*/
+  #lander-philosophy-box p {
+    width: 300px;
+  }
+  .lander-slideshow{
+    width: 280px;
+  }
+  #home-page-logo{
+    width: 240px;
+  }
+  .hamburger-menu{
+    width: 25px;
+    margin-left: 20px;
+  }
+  .hamburger-menu div{
+    width: 25px;
+    margin: 6px 0 0 0;
+  }
+  /*------END HOME------*/
+
+
+  /*------ PRACTICE AREAS ------*/
+  #practice-areas-link-box{
+    width: 280px;
+  }
+  #practice-areas-link-box h5{
+    font-size: 22px;
+  }
+  #overview-services-link-box {
+    width: 270px;
+  }
+  /*------ END PRACTICE AREAS ------*/
+
+  /*------ RESULTS ------*/
+  .results-container{
+    width: 280px;
+  }
+  .individual-result-container{
+    width: 270px;
+  }
+  /*------ END RESULTS ------*/
+
+  /*------ CONTACT ------*/
+  .google-location{
+    width: 290px;
+  }
+  /*------ END CONTACT ------*/
+
+  /*------UNIVERSAL STYLING------*/
+  .dkgray-divider-line{
+    width: 280px;
+  }
+  .defined-width-text{
+    width: 300px;
+  }
+  .thin-orange-divider-line{
+    width: 300px;
+  }
+  .thick-orange-divider-line{
+    width: 300px;
+  }
+  .thin-large-grey-divider-line {
+    width: 300px;
+  }
+  /*------END UNIVERSAL STYLING------*/
+
+
+
+  /*------ATTORNEYS------*/
+  .attorney-inner-container {
+      width: 285px;
+      padding-right: 0px;
+  }
+  .attorney-inner-container p{
+      width: 285px;
+  }
+  .attorney-photo-container {
+    width: 285px;
+    height: 285px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40;
+  }
+  .attorney-photo-container img{
+    width: 285px;
+  }
+  .atty-photo-container img{
+    width: 280px;
+    padding: 10px;
+  }
+  /*------END ATTORNEYS------*/
+
+
+  /*------ ABOUT------*/
+  .about-paragraph-1 img {
+    width: 280px;
+  }
+  .about-paragraph-1 {
+    width: 280px;
+  }
+  .about-paragraph-1 p {
+    width: 280px;
+  }
+  #about-orgz-box {
+    width: 280px;
+  }
+  #about-orgz-box img{
+    width: 270px;
+  }
+  .about-slideshow{
+    width: 280px;
+  }
+  /*------END ABOUT------*/
 }
 

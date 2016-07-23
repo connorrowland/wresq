@@ -34,13 +34,14 @@ $(document).ready(function() {
 
 
 
-
+	/////////////////////////////
+	//SLIDESHOWS	
 	$('.about-slideshow img:gt(0)').hide();
 	$(function(){
    		$('.about-slideshow img:gt(0)').hide();
     	setInterval(function(){
-      		$('.about-slideshow :first-child').fadeOut()
-         	.next('img').fadeIn()
+      		$('.about-slideshow :first-child').fadeOut(1000)
+         	.next('img').fadeIn(1000)
          	.end().appendTo('.about-slideshow');}, 
     	3000);
 	});
@@ -49,8 +50,8 @@ $(document).ready(function() {
 	$(function(){
    		$('.lander-slideshow img:gt(0)').hide();
     	setInterval(function(){
-      		$('.lander-slideshow :first-child').fadeOut()
-         	.next('img').fadeIn()
+      		$('.lander-slideshow :first-child').fadeOut(1000)
+         	.next('img').fadeIn(1000)
          	.end().appendTo('.lander-slideshow');}, 
     	3000);
 	});
