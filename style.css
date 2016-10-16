@@ -896,6 +896,7 @@ footer h4{
   vertical-align: top;
   position: relative;
   background-repeat: round;
+  background-size: cover;
 }
 .post img{
   width: 100%;
