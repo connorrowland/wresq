@@ -413,12 +413,13 @@ footer h4{
 	font-weight: 400;
 }
 .nav-links-container {
-  height: 44px;
+  height: 30px;
   position: relative;
-  top: 15.15px;
+  top: 12px;
   display: inline-block;
   vertical-align: middle;
   z-index: 99;
+  padding-left: 15px;
 }
 .alternate-nav a{
 	color: #1E2123;
