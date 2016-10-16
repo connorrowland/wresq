@@ -413,10 +413,11 @@ footer h4{
 	font-weight: 400;
 }
 .nav-links-container {
+  height: 44px;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  padding-left: 15px;
+  top: 15.15px;
+  display: inline-block;
+  vertical-align: middle;
   z-index: 99;
 }
 .alternate-nav a{
@@ -429,11 +430,8 @@ footer h4{
   border-right: 1px solid black;
 }
 .logo-link{
-  display: inline-block;
-  vertical-align: middle;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 15.15px;
   margin-left: 30px;
 }
 .non-index-header{
