@@ -401,12 +401,7 @@ footer h4{
 	letter-spacing: .5px;
 }
 .alternate-nav{
-  height: 44px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
   display: inline-block;
-  vertical-align: middle;
   z-index: 99;
 }
 .alternate-nav a{
@@ -415,9 +410,8 @@ footer h4{
 .nav-links-container {
   height: 30px;
   position: relative;
-  top: 12px;
+  top: 16px;
   display: inline-block;
-  vertical-align: middle;
   z-index: 99;
   padding-left: 15px;
 }
