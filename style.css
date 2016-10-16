@@ -9,6 +9,9 @@ a{
   border: none;
   text-decoration: none;
 }
+a:hover{
+  border-bottom: 1px solid white;
+}
 img{
   outline: none;
   border: none;
@@ -51,7 +54,7 @@ h5{
 }
 h6{
   font-family: 'Oswald';
-  color: #EA5A3B !important;
+  color: #1E2123;
   font-size: 40px;
   font-weight: 300;
   letter-spacing: 2px;
@@ -61,6 +64,19 @@ h6{
 p{
 	font-family: 'Quattrocento', serif;
 	font-weight: 400;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+li{
+  text-decoration: none;
+  color: white;
+  font-family: 'Oswald';
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 nav a{
   font-family: 'Lato', sans-serif;
@@ -205,7 +221,7 @@ nav a:hover{
 .responsive-nav{
   display: none;
   background-color: #1E2123;
-  height: 250px;
+  height: 355px;
   width: 100%;
 }
 .responsive-nav-links{
@@ -238,14 +254,48 @@ nav a:hover{
   font-size: 18px;
   color: white;  
 }
-
+.dividing-line-text{
+  width: 580px;
+  height: 2px;
+  background-color: white;
+  text-align: center;
+}
+.dividing-line-text h4{
+  padding: 0 15px 0 15px;
+  width: 216px;
+  position: relative;
+  top: -12px;
+  background-color: #1E2123;
+}
+.cta-box{
+  position: relative;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.cta-large-button{
+  border: 5px solid rgba(29, 69, 101, 0.66);
+  background-color: #1B5887;
+  padding: 12px;
+  border-radius: 6px;
+  position: relative;
+}
+.cta-large-button a{
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 3px;
+  color: white;
+}
 
 /*---------------------------------------FOOTER---------------------------------------------------------------------------*/
 
 
 footer{
 	text-align: center;
-	background-color: white;
+	background-color: #f8f8f8;
 }
 footer h4{
   background-color: #1B5887;
@@ -265,6 +315,7 @@ footer h4{
   width: 200px;
   color: #1E2123 !important;
   vertical-align: top;
+  line-height: 1.4;
 }
 .address-container{
 	width: 700px;
@@ -296,16 +347,24 @@ footer h4{
 .index-footer{
 	background-color: #1E2123;
 }
+.index-footer .thin-small-grey-divider-line{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
 .index-footer p{
 	color: white !important;
 }
 .footer-number{
-	color: white;
+	color: #f8f8f8;
 	text-decoration: none;
 }
 .non-index-footer-num{
   color: #1E2123;
   text-decoration: none;
+}
+.non-index-footer .dkgray-divider-line {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 
@@ -378,7 +437,7 @@ footer h4{
   margin-left: 30px;
 }
 .non-index-header{
-  background-color: white;
+  background-color: #f8f8f8;
   height: 75px;
 }
 .alternate-hamburger-menu{
@@ -455,6 +514,7 @@ footer h4{
   font-size: 58px;
   text-shadow: 3px 3px 3px rgba(33, 33, 33, 0.31);
   font-weight: 100;
+  letter-spacing: 2px;
 }
 .text-overlay-image-container {
   position: absolute;
@@ -501,7 +561,7 @@ footer h4{
 }
 #home-page-nav{
   background-color: #1E2123;
-  height: 175px;
+  height: 185px;
   text-align: center;
 }
 #home-page-nav nav{
@@ -518,13 +578,15 @@ footer h4{
   margin-left: auto;
   margin-right: auto;
   text-align: justify;
+  margin-top: 15px;
+}
+#lander-philosophy-box h6{
+  margin-bottom: 0;
 }
 
 
 
 /*------------------------------------------END HOME PAGE-----------------------------------------------------------------*/
-
-
 
 
 
@@ -806,7 +868,149 @@ footer h4{
 }
 
 
-/*--------------------------------------END ATTORNEYS-----------------------------------------------------------------------*/
+/*-------------------------------------- BLOG ------------------------------------------------------------*/
+.featured-post-container{
+  width: 900px;
+  height: 600px;
+  background-image: url('imgs/nyt-post-bg.png');
+  text-align: center;
+  position: relative;
+  margin-top: 60px;
+}
+.featured-post-text-container{
+  text-align: left;
+  background-color: rgba(23, 23, 23, 0.5);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.featured-post-text-container h3, p{
+  margin: 30px;
+}
+.featured-post-text-container h3{
+  font-size: 40px;
+}
+.posts-container{
+  margin-bottom: 40px;
+  text-align: center;
+}
+.post{
+  width: 350px;
+  height: 250px;
+  display: inline-block;
+  background-color: #424242;
+  margin: 40px 40px;
+  vertical-align: top;
+  position: relative;
+  background-repeat: round;
+}
+.post img{
+  width: 100%;
+  height: auto;
+}
+.post h3{
+  font-size: 24px;
+  margin: 0 10px 0 25px;
+}
+.post-title-container{
+  position: absolute;
+  bottom: 0px;
+  text-align: left;
+  background-color: rgba(23, 23, 23, 0.5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.post-title{
+  margin-bottom: 50px;
+}
+.post-title h1{
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 45px;
+  margin-bottom: 0;
+}
+.post-title p{
+  letter-spacing: 1px;
+}
+.related-post-module{
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.related-post-module h5{
+  margin-top: 0;
+  font-size: 30px;
+  padding-bottom: 20px;
+  border-bottom: 4px solid rgba(191, 191, 191, 0.03);
+  margin-bottom: 30px;
+}
+.post-preview {
+  width: 100%;
+  text-align: left;
+  margin: 35px 0;
+}
+.post-preview a{
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  color: #f8f8f8;
+  font-size: 30px;
+}
+.post-preview p{
+  margin: 15px 0 0 0;
+}
+.post-preview-image{
+  width: 145px;
+  height: 100px;
+  display: inline;
+  margin-right: 20px;
+}
+.post-preview-title{
+  display: inline-block;
+  vertical-align: top;
+  width: 400px;
+}
+.post-body{
+  margin-bottom: 200px;
+  margin-top: 70px;
+}
+.post-body p{
+  margin: 15px 0 15px 0;
+  line-height: 1.35;
+}
+.post-body a, .featured-post-text-container a, .post-title-container a{
+  color: white;
+  text-decoration: none;
+}
+.pull-right{
+  float: right;
+  width: 250px;
+  margin: 30px 0 0 30px;
+}
+.pull-right h5{
+  margin: 0;
+}
+.byline{
+  margin-top: 15px;
+}
+.italics{
+  font-style: italic;
+}
+#kowalsky-post{
+  background-image: url('imgs/kowalsky-photo.png');
+}
+#super-lawyer-post{
+  background-image: url('imgs/attorney-group-photo.jpg')
+}
+.small-img{
+  width: 300px;
+}
+
+/*-------------------------------------- END BLOG ------------------------------------------------------------*/
+
+
+/*-------------------------------------- END ATTORNEYS -----------------------------------------------------------------------*/
 @media only screen and (min-width: 1550px) {
   #about-lander-img{
     transform: translateY(-190px);
@@ -819,13 +1023,16 @@ footer h4{
   .non-homepage-image{
     transform: translateY(0px);
   }
+  /*------ BLOG ------*/
+  .featured-post-container{
+    width: 700px;
+    height: 470px;
+  }
+  /*------ END BLOG ------*/
 }
 @media only screen and (max-width: 1025px) {
   /*------ ABOUT ------*/  
-  .about-paragraph-1{
-    width: 700px;
-  }
-  #about-orgz-box{
+  .about-paragraph-1,#about-orgz-box{
     width: 700px;
   }
   /*------ END ABOUT ------*/
@@ -894,19 +1101,7 @@ footer h4{
   }
   .non-homepage-lander-image-container h3{
     font-size: 45px;
-  }  
-}
-
-@media only screen and (max-width: 830px) {
-  /*------ HOME ------*/
-  #trust-the-results {
-    font-size: 45px;
-    width: 350px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /*------ END HOME ------*/
+  } 
   .alternate-nav{
     display: none;
   }
@@ -922,13 +1117,34 @@ footer h4{
   }
   #header-logo{
     border-right: none;
+  } 
+}
+
+@media only screen and (max-width: 830px) {
+  /*------ HOME ------*/
+  #trust-the-results {
+    font-size: 45px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
   }
+  /*------ END HOME ------*/
   
   /*------ ATTORNEYS ------*/
   .atty-photo-container img{
     width: 550px;
   }
   /*------ END ATTORNEYS ------*/
+
+  /*------ BLOG ------*/
+  .featured-post-container{
+    width: 550px;
+    height: 370px;
+  }
+  .featured-post-text-container h3{
+    font-size: 25px;
+  }
+  /*------ END BLOG ------*/
 
 }
 
@@ -938,10 +1154,7 @@ footer h4{
 	.defined-width-text{
 		width: 655px;
 	}
-	.thin-orange-divider-line{
-		width: 645px;
-	}
-	.thick-orange-divider-line{
+	.thin-orange-divider-line,.thick-orange-divider-line{
 		width: 645px;
 	}
   /*------END UNIVERSAL STYLING------*/
@@ -1033,25 +1246,20 @@ footer h4{
   }
   /*------END FOOTER------*/
 
-
-
   /*------ ATTORNEYS------*/
   .attorney-inner-container {
       width: 450px;
   }
   /*------END ATTORNEYS------*/
+
 }
 
 
 @media only screen and (max-width: 650px) {
   /*------UNIVERSAL STYLING------*/
-	.defined-width-text{
-		width: 455px;
-	}
-	.thin-orange-divider-line{
-		width: 455px;
-	}
-	.thick-orange-divider-line{
+	.defined-width-text,
+  .thin-orange-divider-line,
+  .thick-orange-divider-line{
 		width: 455px;
 	}
   .nav-container{
@@ -1115,8 +1323,6 @@ footer h4{
   }
   /*------END HOME------*/
 
-
-
   /*------RESULTS------*/
     .results-container{
     margin-bottom: 50px;
@@ -1143,6 +1349,22 @@ footer h4{
     margin-bottom: 10px;
   }
   /*------END RESULTS------*/
+
+  /*------ BLOG ------*/
+  .featured-post-container{
+    width: 400px;
+    height: 270px;
+  }
+  .featured-post-text-container{
+    background: none;
+  }
+  .featured-post-text-container p{
+    font-size: 14px;
+  }
+  .related-post-module{
+    width: 450px;
+  }
+  /*------ END BLOG ------*/
 }
 
 
@@ -1212,6 +1434,22 @@ footer h4{
   }
   /*------ END ATTORNEYS ------*/
 
+  /*------ BLOG ------*/
+  .post-preview {
+    text-align: center;
+  }
+  .post-preview-image{
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+  }
+  .post-preview-title{
+    width: inherit;
+  }
+
+  /*------ END BLOG ------*/
+
 }
 
 
@@ -1240,13 +1478,9 @@ footer h4{
   .dkgray-divider-line{
     width: 330px;
   }
-	.defined-width-text{
-		width: 355px;
-	}
-	.thin-orange-divider-line{
-		width: 355px;
-	}
-	.thick-orange-divider-line{
+	.defined-width-text,
+  .thick-orange-divider-line,
+  .thin-orange-divider-line{
 		width: 355px;
 	}
 	#home-page-nav{
@@ -1263,6 +1497,9 @@ footer h4{
 	}
   .non-homepage-lander-image-container h3{
     font-size: 35px;
+  }
+  .dividing-line-text{
+    width: 300px;
   }
   /*------END UNIVERSAL STYLING------*/
 
@@ -1284,14 +1521,12 @@ footer h4{
   /*------END HOME------*/
 
   /*------ABOUT------*/
-  #about-orgz-box {
+  #about-orgz-box,
+  .about-paragraph-1 {
     width: 350px;
   }
   #about-orgz-box img{
     margin: 20px 0 20px 0;
-  }  
-  .about-paragraph-1{
-    width: 350px;
   }
   /*------END ABOUT------*/
 
@@ -1315,6 +1550,30 @@ footer h4{
     padding: 10px;
   }
   /*------END ATTORNEYS------*/
+
+  /*------ BLOG ------*/
+  .featured-post-container{
+    width: 310px;
+    height: 370px;
+    padding: 0px;
+  }
+  .post{
+    margin: 40px 0;
+    width: 300px;
+    padding: 0;
+  }
+  .related-post-module{
+    width: 310px;
+  }
+  .post-preview{
+    text-align: center;
+  }
+  .pull-right{
+    float: none;
+    width: 270px;
+    margin: 30px 0 30px 35px;
+  }
+  /*------ END BLOG ------*/
 
 }
 
@@ -1372,17 +1631,20 @@ footer h4{
   .dkgray-divider-line{
     width: 280px;
   }
-  .defined-width-text{
+  .defined-width-text,
+  .thin-orange-divider-line,
+  .thick-orange-divider-line,
+  .thin-large-grey-divider-line{
     width: 300px;
   }
-  .thin-orange-divider-line{
-    width: 300px;
+  .dividing-line-text{
+    width: 280px;
+    height: 2px;
+    background-color: white;
+    text-align: center;
   }
-  .thick-orange-divider-line{
-    width: 300px;
-  }
-  .thin-large-grey-divider-line {
-    width: 300px;
+  .dividing-line-text h4{
+    font-size: 23px;
   }
   /*------END UNIVERSAL STYLING------*/
 
@@ -1414,23 +1676,14 @@ footer h4{
 
 
   /*------ ABOUT------*/
-  .about-paragraph-1 img {
-    width: 280px;
-  }
-  .about-paragraph-1 {
-    width: 280px;
-  }
-  .about-paragraph-1 p {
-    width: 280px;
-  }
-  #about-orgz-box {
+  .about-paragraph-1 img,
+  .about-paragraph-1,
+  .about-paragraph-1 p,
+  #about-orgz-box,.about-slideshow  {
     width: 280px;
   }
   #about-orgz-box img{
     width: 270px;
-  }
-  .about-slideshow{
-    width: 280px;
   }
   /*------END ABOUT------*/
 }
