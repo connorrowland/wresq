@@ -9,9 +9,6 @@ a{
   border: none;
   text-decoration: none;
 }
-a:hover{
-  border-bottom: 1px solid white;
-}
 img{
   outline: none;
   border: none;
@@ -68,15 +65,6 @@ p{
 ul{
   list-style: none;
   padding: 0;
-}
-li{
-  text-decoration: none;
-  color: white;
-  font-family: 'Oswald';
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: 24px;
-  margin-bottom: 10px;
 }
 nav a{
   font-family: 'Lato', sans-serif;
@@ -281,6 +269,7 @@ nav a:hover{
   padding: 12px;
   border-radius: 6px;
   position: relative;
+  cursor: pointer;
 }
 .cta-large-button a{
   font-family: 'Lato', sans-serif;
@@ -289,7 +278,9 @@ nav a:hover{
   letter-spacing: 3px;
   color: white;
 }
-
+.underline-link:hover{
+  border-bottom: 1px solid white;
+}
 /*---------------------------------------FOOTER---------------------------------------------------------------------------*/
 
 
@@ -862,13 +853,22 @@ footer h4{
 
 
 /*-------------------------------------- BLOG ------------------------------------------------------------*/
+.post-body li{
+  text-decoration: none;
+  color: white;
+  font-family: 'Oswald';
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 .featured-post-container{
   width: 900px;
   height: 600px;
-  background-image: url('imgs/nyt-post-bg.png');
   text-align: center;
   position: relative;
   margin-top: 60px;
+  background-size: cover;
 }
 .featured-post-text-container{
   text-align: left;
@@ -877,7 +877,7 @@ footer h4{
   bottom: 0px;
   width: 100%;
 }
-.featured-post-text-container h3, p{
+.featured-post-text-container h3, .featured-post-text-container p{
   margin: 30px;
 }
 .featured-post-text-container h3{
@@ -904,7 +904,7 @@ footer h4{
 }
 .post h3{
   font-size: 24px;
-  margin: 0 10px 0 25px;
+  margin: 0 10px 0 20px;
 }
 .post-title-container{
   position: absolute;
@@ -977,6 +977,9 @@ footer h4{
   color: white;
   text-decoration: none;
 }
+.post-body h3{
+  font-size: 24px;
+}
 .pull-right{
   float: right;
   width: 250px;
@@ -995,7 +998,13 @@ footer h4{
   background-image: url('imgs/kowalsky-photo.png');
 }
 #super-lawyer-post{
-  background-image: url('imgs/attorney-group-photo.jpg')
+  background-image: url('imgs/sl-announcement-bg.png')
+}
+#nyt-post{
+  background-image: url('imgs/nyt-post-bg.png')
+}
+#PI-claim-post{
+  background-image: url('imgs/law-med-books.png');
 }
 .small-img{
   width: 300px;
@@ -1223,6 +1232,9 @@ footer h4{
 
 
 @media only screen and (max-width: 700px) {
+  .cta-box{
+    width: 300px;
+  }
   /*------FOOTER------*/
   .footer-address-line {
     padding-left: 0;
@@ -1441,6 +1453,9 @@ footer h4{
   .post-preview-title{
     width: inherit;
   }
+  .dividing-line-text{
+    width: 400px;
+  }
 
   /*------ END BLOG ------*/
 
@@ -1526,11 +1541,12 @@ footer h4{
 
   /*------ATTORNEYS------*/
   .attorney-inner-container {
-      width: 330px;
-      padding-right: 0px;
+    width: 330px;
+    padding-right: 0px;
   }
   .attorney-inner-container p{
-      width: 330px;
+    width: 330px;
+    margin-left: 0px;
   }
   .attorney-photo-container {
     width: 320px;

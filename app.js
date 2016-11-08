@@ -9,11 +9,11 @@ $(document).ready(function() {
 	//////////////////////////////
 	//PAGE TRANSITIONS
 	$('body').css('display', 'none');
-	$('body').fadeIn(1000);
+	$('body').fadeIn(700);
 	$('.nav-links').click(function() {
 		event.preventDefault();
 		newLocation = this.href;
-		$('body').fadeOut(1000, newpage);
+		$('body').fadeOut(700, newpage);
 	});
 	function newpage() {
 		window.location = newLocation;
